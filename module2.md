@@ -45,7 +45,8 @@
 - http://npmjs.org
 - npm init (new projects only)
 - npm install (after cloning existing project)
-- npm install --save package-name (add )
+- npm install --save package-name
+- npm install --save-dev package-name
 - npm install -g package-name (may require sudo)
 - package.json (every node project needs one)
 - always add "node_modules" to .gitignore
@@ -55,7 +56,7 @@
 - "dependencies" are the packages the project needs to be executed
 - "devDependencies" are the packages the developers need to work on the project
 
-```
+```json
 "scripts": {
   "start": "node app.js",
   "start-dev": "nodemon --inspect app.js"
@@ -89,6 +90,8 @@
   - serialize
   - deserialize
   - use(new Strategy)
+  - app.use(...);
+  - app.use(...);
 - req.login(newUser)
 - req.logout()
 - if (!req.user) { ... }
@@ -125,20 +128,24 @@
 - https://signup.heroku.com/?c=70130000001x9jEAAQ
 - heroku login
 - heroku git:remote -a projectName
-- package.json -> "start": "node ./bin/www"
+- package.json
+  - "start": "node ./bin/www"
+  - npm & node engines
 - git push heroku master
 - heroku logs
 - heroku addons:create mongolab:sandbox
 - heroku addons:open mongolab
 - heroku config:get MONGODB_URI
+- REMOVE ALL API KEYS (e.g. facebook secret) FROM YOUR CODE!!!!
 - npm install --save dotenv
+- require('dotenv').config();
 - example .env file (adds fake environment variables to `process.env`)
-```
+```javascript
   MONGODB_URI=mongodb://localhost/databaseName
 ```
 - .gitignore .env
 - example app.js
-```
+```javascript
   require("dotenv").config();
   mongoose.connect(process.env.MONGODB_URI);
 ```
