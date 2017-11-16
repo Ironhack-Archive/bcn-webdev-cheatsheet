@@ -28,7 +28,11 @@
 - app can be an http server (runs "forever")
 - runs javascript, same as browser (but no window, no DOM)
 - start apps with "node app.js"
+<<<<<<< Updated upstream
 - node callbacks convection (err, result) => { ... }
+=======
+- node callback convention: (err, result) => { ... }
+>>>>>>> Stashed changes
 
 # node modules
 - every js file is a module
@@ -39,7 +43,6 @@
   - const mymodule = require('./folder/mymodule')
 - for npm packages:
   - const express = require('express')
-
 
 # npm
 - http://npmjs.org
@@ -67,18 +70,45 @@
 - nodemon --inspect app.js
 - in package.json scripts
   - "start": "nodemon app.js"
-
   - "start-dev": "nodemon --inspect app.js"
 
-# express
 
 # express generator
 - npm install -g express-generator
 - express my-project --view=ejs --git
-- package.json scripts
+- add start-dev to package.json scripts
+- add launcher.json
+- add .eslintrc.json (eslint --init) OR .jshintrc
+- git init
+- add .gitignore
 
-#mongodb
+# express
+- http server framework
+- pipeline of middlewares, followed by routes
+- see snippets
 
+# mongodb
+- document database (as opposedd to relational database)
+- stores data as documents, schema free, but relationships still exist
+- instal mongodb, make sure it is running
+
+# mongo shell
+- $ mongo
+- show dbs
+- use databaseName
+- db.help()
+- show collections
+- db.collectionName.help()
+- db.collectionName.find().pretty()
+- db.collectionName.insert({})
+
+# mongo import
+- mongoimport  --db databaseName  --collection collectionName --file fileName
 
 # mongoose
-- `npm install --save mongoose`
+- npm install --save mongoose
+- object document mapper
+- bring schemas into our use of mongodb
+- see example schemas in `./snippets`
+- types: String, Number, Date, Boolean, Array, Mixed, Objectid
+
