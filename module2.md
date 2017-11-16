@@ -111,7 +111,7 @@
 
 # heroku
 - http://learn.ironhack.com/#/learning_unit/2233
-- Is a cloud platform
+- Is a cloud platform for hosting apps
 - https://signup.heroku.com/?c=70130000001x9jEAAQ
 - heroku login
 - heroku git:remote -a projectName
@@ -122,10 +122,11 @@
 - heroku addons:open mongolab
 - heroku config:get MONGODB_URI
 - npm install --save dotenv
-- example .env file
+- example .env file (adds fake environment variables to `process.env`)
 ```
   MONGODB_URI=mongodb://localhost/databaseName
 ```
+- .gitignore .env
 - example app.js
 ```
   require("dotenv").config();
