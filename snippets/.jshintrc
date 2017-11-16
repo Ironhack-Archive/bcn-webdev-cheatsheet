@@ -1,0 +1,12 @@
+{
+  "undef": true,
+  "unused": true,
+  "strict": "global",
+  "esversion": 6,
+  "globals": {
+    "console": true,
+    "require": true,
+    "module": true,
+    "setTimeout":true
+  }
+}
