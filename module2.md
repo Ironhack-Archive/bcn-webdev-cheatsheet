@@ -108,3 +108,26 @@
 - bring schemas into our use of mongodb
 - see example schemas in `./snippets`
 - types: String, Number, Date, Boolean, Array, Mixed, Objectid
+
+# heroku
+- http://learn.ironhack.com/#/learning_unit/2233
+- Is a cloud platform
+- https://signup.heroku.com/?c=70130000001x9jEAAQ
+- heroku login
+- heroku git:remote -a projectName
+- package.json -> "start": "node ./bin/www"
+- git push heroku master
+- heroku logs
+- heroku addons:create mongolab:sandbox
+- heroku addons:open mongolab
+- heroku config:get MONGODB_URI
+- npm install --save dotenv
+- example .env file
+```
+  MONGODB_URI=mongodb://localhost/databaseName
+```
+- example app.js
+```
+  require("dotenv").config();
+  mongoose.connect(process.env.MONGODB_URI);
+```
