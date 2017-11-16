@@ -77,12 +77,22 @@
 - add launcher.json
 - add .eslintrc.json (eslint --init) OR .jshintrc
 - git init
-- add .gitignore
+- add .gitignore with node_modules
 
 # express
 - http server framework
 - pipeline of middlewares, followed by routes
 - see snippets
+
+# passport
+- config (see snippet)
+  - serialize
+  - deserialize
+  - use(new Strategy)
+- req.login(newUser)
+- req.logout()
+- if (!req.user) { ... }
+- if (!req.isAuthenticated()) { ... }
 
 # mongodb
 - document database (as opposedd to relational database)
