@@ -28,11 +28,8 @@
 - app can be an http server (runs "forever")
 - runs javascript, same as browser (but no window, no DOM)
 - start apps with "node app.js"
-<<<<<<< Updated upstream
 - node callbacks convection (err, result) => { ... }
-=======
-- node callback convention: (err, result) => { ... }
->>>>>>> Stashed changes
+
 
 # node modules
 - every js file is a module
@@ -111,4 +108,3 @@
 - bring schemas into our use of mongodb
 - see example schemas in `./snippets`
 - types: String, Number, Date, Boolean, Array, Mixed, Objectid
-
