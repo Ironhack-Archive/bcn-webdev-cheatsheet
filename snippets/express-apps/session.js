@@ -1,4 +1,10 @@
-// Session
+// npm install --save express-session connect-mongo
+
+const session = require('express-session');
+const MongoStore = require('connect-mongo')(session);
+
+// --
+
 app.use(session({
   store: new MongoStore({
     mongooseConnection: mongoose.connection,
@@ -8,6 +14,6 @@ app.use(session({
   resave: true,
   saveUninitialized: true,
   cookie: {
-    maxAge: 60000
+    maxAge: 24 * 60 * 60 * 1000
   }
 }));

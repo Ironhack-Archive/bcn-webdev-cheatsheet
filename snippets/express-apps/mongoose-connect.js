@@ -1,3 +1,9 @@
+// npm install --save mongoose
+
+const mongoose = require('mongoose');
+
+// --
+
 mongoose.Promise = Promise;
 mongoose.connect('mongodb://localhost/database-name', {
   keepAlive: true,

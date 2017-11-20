@@ -24,7 +24,7 @@ app.use(function (err, req, res, next) {
 
   // only render if the error ocurred before sending the response
   if (!res.headersSent) {
-    res.status(err.status || 500);
+    res.status(500);
     res.render('error');
   }
 });
