@@ -1,0 +1,30 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* -- forms -- */
+
+form.is-processing {
+	opacity: 0.5;
+}
+
+form .field {
+	margin-bottom: 20px;
+}
+
+form label {
+	display: block;
+	margin-bottom: 10px;
+	font-style: bold;
+}
+
+form .field.has-error label {
+	color: red;
+}
+
+form .validation {
+	margin: 5px 0 10px;
+	color: red;
+}
+
+form .field.has-error input {
+	border: 1px solid  red;
+}
