@@ -66,7 +66,7 @@ typescript
 
 - this tiny node server will serve your angular app in heroku
 - copy `app.js` to the root of the repository
-- `npm install --save express` 
+- `npm install --save express`
 
 ## frontend environemnts
 
@@ -92,7 +92,9 @@ const apiUrl = environment.apiUrl + '/name-of-resource';
 - load a route that does a GET/POST to backend
 - test that there are no errors in the console
 - test you get the expected results from heroku (success, the seeded data or empty results)
-- after testing make sure you reset the settings in the heroku backend project AND in the `apiUrl` in `environment.ts` 
+- after testing make sure you reset the settings
+-- in the heroku backend project settings, `CLIENT_URL` should be set to `https://foobar.herokuapp.com`
+-- in `environment.ts` the `apiUrl` key should be set to `http://localhost:3000`
 
 ## deploy
 
