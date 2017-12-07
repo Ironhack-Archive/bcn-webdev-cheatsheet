@@ -37,7 +37,9 @@ CLIENT_URL=http://foobar.herokuapp.com
 
 ## frontend add app.js file
 
+- this tiny node server will serve your angular app in heroku
 - copy `app.js` to the root of the repository
+- `npm install --save express`
 
 ## frontend package.json
 
