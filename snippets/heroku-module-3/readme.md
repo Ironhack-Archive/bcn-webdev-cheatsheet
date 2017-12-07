@@ -35,12 +35,6 @@ CLIENT_URL=http://foobar.herokuapp.com
 
 - fix all the errors
 
-## frontend add app.js file
-
-- this tiny node server will serve your angular app in heroku
-- copy `app.js` to the root of the repository
-- `npm install --save express`
-
 ## frontend package.json
 
 - add engines (run `node --version` and `npm --version` in your laptop first)
@@ -67,6 +61,12 @@ CLIENT_URL=http://foobar.herokuapp.com
 @angular/compiler-cli
 typescript
 ```
+
+## frontend add app.js file
+
+- this tiny node server will serve your angular app in heroku
+- copy `app.js` to the root of the repository
+- `npm install --save express` 
 
 ## frontend environemnts
 
