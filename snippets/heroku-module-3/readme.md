@@ -27,7 +27,7 @@ MONGODB_URI=...
 CLIENT_URL=http://foobar.herokuapp.com
 ```
 
-# frontenf
+# frontend
 
 - create heroku app "foobar"
 
@@ -35,32 +35,36 @@ CLIENT_URL=http://foobar.herokuapp.com
 
 - fix all the errors
 
-
 ## frontend add app.js file
+
+- copy `app.js` to the root of the repository
 
 ## frontend package.json
 
-add engines (run `node --version` and `npm --version` in your laptop first)
+- add engines (run `node --version` and `npm --version` in your laptop first)
 
 ```
-  "engines": {
-    "node": "9.0.0",
-    "npm": "5.5.1"
-  },
+"engines": {
+  "node": "9.0.0",
+  "npm": "5.5.1"
+},
 ```
 
-add scripts
+- add the following entries to the `scripts` object
 
 ```
-	"heroku-prebuild": "rm -rf node_modules && npm cache clean --force",
-	"postinstall": "ng build --aot -prod",
-	"start": "node app.js"
+"heroku-prebuild": "rm -rf node_modules && npm cache clean --force",
+"postinstall": "ng build --aot -prod",
+"start": "node app.js"
 ```
 
-move from `devDependencies` to `dependencies`:
-- @angular/cli
-- @angular/compiler-cli
-- typescrip
+- move the following entries from `devDependencies` to `dependencies`:
+
+```
+@angular/cli
+@angular/compiler-cli
+typescript
+```
 
 ## frontend environemnts
 
@@ -86,5 +90,12 @@ const apiUrl = environment.apiUrl + '/name-of-resource';
 - load a route that does a GET/POST to backend
 - test that there are no errors in the console
 - test you get the expected results from heroku (success, the seeded data or empty results)
+- after testing make sure you reset the settings in the heroku backend project AND in the `apiUrl` in `environment.ts` 
+
+## deploy
+
+- commit everything
+- merge to master
+- push to `origin master` AND `heroku master`
 
 
