@@ -1,5 +1,15 @@
 # concepts
 
+## web
+
+- browser
+- frontend/backend
+- static website
+- separation of concerns
+-- structure: html
+-- presentation: css
+-- behaviour: js
+
 ## concepts js
 - run time environment
 - expression
