@@ -1,0 +1,52 @@
+# concepts
+
+## concepts js
+- run time environment
+- expression
+- statement
+- assignment
+- declaration
+- type
+- literal
+- variable
+- control structure
+- conditional
+- algorithm
+- function
+- argument
+- closure
+- scope
+- callback
+- context
+- prototype
+- object oriented programming
+- encapsulation
+- inheritance
+- composition
+
+## concepts html
+- dom tree
+- dom node
+- element type
+- attribute
+- block vs inline
+- manipulation
+- events
+- binding/unbinding event listeners
+
+## concepts css
+- selector
+- specifity
+- pseudo-selector
+- attribute
+- user agent styles
+- reset
+- layout
+- typography
+- responsive web design
+- liquid
+- mobile first
+- box model
+- transition
+- animation
+- flexbox
