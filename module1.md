@@ -6,9 +6,9 @@
 - frontend/backend
 - static website
 - separation of concerns
--- structure: html
--- presentation: css
--- behaviour: js
+  - structure: html
+  - presentation: css
+  - behaviour: js
 
 ## concepts js
 - run time environment
