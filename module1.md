@@ -24,8 +24,10 @@
 - algorithm
 - function
 - argument
-- closure
 - scope
+- debugging
+- breakpoint
+- closure
 - callback
 - context
 - prototype
