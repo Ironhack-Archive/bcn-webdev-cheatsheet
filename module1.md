@@ -62,3 +62,18 @@
 - transition
 - animation
 - flexbox
+
+## concepts git
+- control version
+- status
+- staging
+- commit
+- remote
+- branch
+- merge
+
+## concepts tools
+- linting
+- beautifying
+
+
