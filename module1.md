@@ -76,4 +76,24 @@
 - linting
 - beautifying
 
+# javascript
 
+- var x = 1;
+- types:
+  - number: 1 1.3 Infinity NaN
+  - boolean: true false
+  - string: "hello world"
+  - object
+  - function
+  - undefined
+- arithmetic operators: `+ - * / % **`
+- assignment operators: `= += -= *= /= %= **=`
+- boolean operators: `&& || !`
+- operator precedence: PEMDAS
+- typeof operator
+- control structures:
+  - if (expression) { ... } else { ... }
+  - for (initialize; condition; modify ) { ... }
+  - while (condition) { ... }
+  - do { ... } while (condition) 
+  - switch (expression) { case "foo": ... ; break; }
