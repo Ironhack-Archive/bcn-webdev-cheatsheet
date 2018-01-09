@@ -39,6 +39,7 @@
 ## concepts html
 - dom tree
 - dom node
+- root, ancestor, descendent, parent, child, sibling
 - element type
 - attribute
 - block vs inline
@@ -48,9 +49,9 @@
 
 ## concepts css
 - selector
+- property, value
 - specifity
 - pseudo-selector
-- attribute
 - user agent styles
 - reset
 - layout
