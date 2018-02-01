@@ -1,7 +1,6 @@
-// npm instal --save express-ejs-layouts
+// npm install --save express-ejs-layouts
 
 const expressLayouts = require('express-ejs-layouts');
-
 // --
 
 app.use(expressLayouts);
