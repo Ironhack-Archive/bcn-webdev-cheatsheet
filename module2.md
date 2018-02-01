@@ -24,7 +24,7 @@
 - template (and multiline) strings
 
 # nodejs
-- *IT'S NOT A FRAMEWORK!*
+- **IT'S NOT A FRAMEWORK!**
 - runtime environment for running javascript in the backend (v8 engine)
 - app can be an http server (runs "forever")
 - runs javascript, same as browser (but no window, no DOM)
