@@ -30,6 +30,7 @@
 - runs javascript, same as browser (but no window, no DOM)
 - start apps with "node app.js"
 - node callbacks convection (err, result) => { ... }
+- has some built-in modules like `fs`, `process`, `path` and `http`
 
 
 # node modules
@@ -77,7 +78,7 @@
 - express my-project --view=ejs --git
 - add start-dev to package.json scripts
 - add launcher.json
-- add .eslintrc.json (eslint --init) OR .jshintrc
+- add .eslintrc.json (eslint --init)
 - git init
 - add .gitignore with node_modules
 
@@ -101,7 +102,7 @@
 # mongodb
 - document database (as opposedd to relational database)
 - stores data as documents, schema free, but relationships still exist
-- instal mongodb, make sure it is running
+- install mongodb, make sure it is running
 
 # mongo shell
 - $ mongo
