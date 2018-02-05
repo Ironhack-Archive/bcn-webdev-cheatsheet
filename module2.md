@@ -87,6 +87,16 @@
 - pipeline of middlewares, followed by routes
 - see snippets
 
+# auth
+- use expression session (see snippet)
+- 2x routes for login (get & post)
+- 2x routes for signup (get & post)
+- use post for logout
+- signup: req.session.currentUser = newUser
+- login: req.session.currentUser = user
+- logout: req.session.currentUser = null
+- user in views: req.locals.user = req.session.currentUser
+
 # passport
 - config (see snippet)
   - serialize
