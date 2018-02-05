@@ -1,3 +1,5 @@
+// note: use in conjunction with https://github.com/ByronGBP/ih-cheat-sheet/blob/master/snippets/express-apps/passport.js
+
 'use strict';
 
 const bcrypt = require('bcrypt');
