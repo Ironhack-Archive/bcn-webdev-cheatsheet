@@ -17,3 +17,11 @@ app.use(session({
     maxAge: 24 * 60 * 60 * 1000
   }
 }));
+
+
+// note1: currentUser needs to match whatever you use in login/signup/logout routes
+// note2: if using passport, req.user instead
+app.use(function (req, res, next) {
+  app.locals.user = req.session.currentUser;
+  next();
+});
