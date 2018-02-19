@@ -30,8 +30,7 @@
 - runs javascript, same as browser (but no window, no DOM)
 - start apps with "node app.js"
 - node callbacks convection (err, result) => { ... }
-- has some built-in modules like `fs`, `process`, `path` and `http`
-
+- has some built-in modules like `fs`, `process`, `path` and `http`+
 
 # node modules
 - every js file is a module
