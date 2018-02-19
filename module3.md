@@ -34,4 +34,46 @@
 
 
 # angular
-- made with typescript
+- made by google
+- written in typescript
+- single page application framework, including:
+  - views
+  - components
+  - form management
+  - routing
+  - dependency injection
+
+
+# angular CLI
+- ng new
+- ng serve
+- ng g c components/...
+- ng g c pages/...
+- ng g s services/...
+- ng g class models/...
+
+# app structure
+- `index.html`
+  - is static
+  - contains `<app-root></app-root>`
+  - can contain extra script and style tags
+- app/app.module.ts (a.k.a. THE app)
+  - declares all the angular modules used in the app
+  - declares the routing
+  - declares all the components created by us
+  - declares all the services, pipes, etc... create by us
+- app/app.component.* (a.k.a. main component or layout component)
+  - layout of the app (header, footer)
+  - where the `<router-outlet></router-outlet>`goes
+- app/pages
+  - where we should store our page components
+  - `ng g c pages/login-page`
+- app/components
+  - where we should store our smaller components
+  - `ng g c components/auth-login-form`
+
+# templates
+- interpolation {{...}}
+- *ngFor="let item of array"
+- *ngIf="criteria"
+- *ngForm
