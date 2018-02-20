@@ -5,11 +5,14 @@
 - REST API
 
 # typescript
+- [DOCS](https://www.typescriptlang.org/)
+- [LU](http://learn.ironhack.com/#/learning_unit/2960)
 - made by microsoft
 - superset of javascript
 - browser can NOT understand typescript
 - transpiled down to es6 or es5 by tools
 - types
+  - [DOCS](https://www.typescriptlang.org/docs/handbook/basic-types.html)
   - type safety vs javascript dynamic types
   - can (should) be applied to:
     - constants and variables
@@ -17,10 +20,12 @@
     - function return values
     - class properties
 - interfaces
+  - [DOCS](https://www.typescriptlang.org/docs/handbook/interfaces.html)
   - small reusables "contracts"
   - define what will be "public"
   - interfaces are also types (advanced)
 - classes
+  - [DOCS](https://www.typescriptlang.org/docs/handbook/classes.html)
   - concept of public vs private
   - properties documented before the constructor
   - class properties have types
@@ -30,8 +35,8 @@
   - methods and fields can be declared as private
   - private, public shortcut on constructors
 - decorators
+  - [DOCS](https://www.typescriptlang.org/docs/handbook/decorators.html)
   - can be applied to class, class property, class method, function param, getters/setters
-  - 
 
 
 # angular
