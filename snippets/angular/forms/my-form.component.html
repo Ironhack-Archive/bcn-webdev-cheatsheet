@@ -1,26 +1,26 @@
-<form (ngSubmit)="submitForm(myForm)" #myForm="ngForm" novalidate>
+<form (ngSubmit)="submitForm(form)" #form="ngForm" novalidate>
 
-  <div class="field" [ngClass]="{'has-error': feedbackEnabled && myUsername.errors}">
+  <div class="field" [ngClass]="{'has-error': feedbackEnabled && usernameField.errors}">
     <label>Username</label>
-    <input type="text" name="username" [(ngModel)]="username" #myUsername="ngModel" required minlength="6" [disabled]="processing"/>
-    <div *ngIf="feedbackEnabled && myUsername.errors">
-      <p *ngIf="myUsername.errors.required" class="validation">username required</p>
-      <p *ngIf="myUsername.errors.minlength" class="validation">username is too short</p>
+    <input type="text" name="username" [(ngModel)]="username" #usernameField="ngModel" required minlength="6" [disabled]="processing"/>
+    <div *ngIf="feedbackEnabled && usernameField.errors">
+      <p *ngIf="usernameField.errors.required" class="validation">username required</p>
+      <p *ngIf="usernameField.errors.minlength" class="validation">username is too short</p>
     </div>
   </div>
 
-  <div class="field" [ngClass]="{'has-error': feedbackEnabled && myPassword.errors}">
+  <div class="field" [ngClass]="{'has-error': feedbackEnabled && passwordField.errors}">
     <label>Password</label>
-    <input type="password" name="password" [(ngModel)]="password" #myPassword="ngModel" required minlength="6"  [disabled]="processing"/>
-    <div *ngIf="feedbackEnabled && myPassword.errors">
-      <p *ngIf="myPassword.errors.required" class="validation">password required</p>
-      <p *ngIf="myPassword.errors.minlength" class="validation">password is too short</p>
+    <input type="password" name="password" [(ngModel)]="password" #passwordField="ngModel" required minlength="6"  [disabled]="processing"/>
+    <div *ngIf="feedbackEnabled && passwordField.errors">
+      <p *ngIf="passwordField.errors.required" class="validation">password required</p>
+      <p *ngIf="passwordField.errors.minlength" class="validation">password is too short</p>
     </div>
   </div>
 
   <div class="field submit">
     <button type="submit" [disabled]="processing">Login</button>
-    <div *ngIf="feedbackEnabled && myForm.invalid">
+    <div *ngIf="feedbackEnabled && form.invalid">
       <p class="validation">there are errors in the form, please review the fields</p>
     </div>
   </div>
