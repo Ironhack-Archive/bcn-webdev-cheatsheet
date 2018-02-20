@@ -21,7 +21,7 @@
   - define what will be "public"
   - interfaces are also types (advanced)
 - classes
-  - concept of public vs default
+  - concept of public vs private
   - properties documented before the constructor
   - class properties have types
   - class method arguments and return values have types
@@ -30,7 +30,8 @@
   - methods and fields can be declared as private
   - private, public shortcut on constructors
 - decorators
-  - can be applied to classes, fields 
+  - can be applied to class, class property, class method, function param, getters/setters
+  - 
 
 
 # angular
@@ -72,8 +73,30 @@
   - where we should store our smaller components
   - `ng g c components/auth-login-form`
 
+# binding
+- interpolation `{{ expression }}`
+- property binding `<button [disabled]="processing">`
+- event binding `<button (click)="handleClick($event)">`
+- two way binding 
+  - add `import { FormsModule } from '@angular/forms';` to `app.module.ts`
+  - add `imports: [ ... FormsModule, ... ]` to `app.module.ts`
+  - `<input type="text" [(ngModel)]="username" />`
+
+# template variables
+- declared directly in templates
+  - in inputs `<input #username ...>`
+  - in inputs with NgModel `<input #usernameField="ngModel" ...>`
+  - in forms `<form #form="ngForm" ...>`
+- used directly in templates
+  - ngModel variables `<div *ngIf="usernameField.errors">`
+  - ngForm variables `<div *ngIf="form.invalid">`
+- passed from template to component class
+  - input/ngModel variables `<input (keyup)="handleKeyUp(usernameField.value)" ...`
+  - ngForm variables `<form (ngSubmit)="addAnimal(form)" ...`
+  
+
+
 # templates
-- interpolation {{...}}
 - *ngFor="let item of array"
 - *ngIf="criteria"
 - *ngForm
