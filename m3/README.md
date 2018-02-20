@@ -112,13 +112,25 @@
   - errors (e.g. `usernameField.errors.minlength`)
 
 # directives
-- `*ngIf="expression"`
-- `*ngFor="let item of array"`
-- `*ngFor="let item of array, let ix = index"`
-- `*ngFor="let item of array, trackBy: trackFn"`
-- `[ngSwitch]="expression">` + `*ngSwitchCase="expression"` + `*ngSwitchDefault` 
-- `[ngClass]="{ 'has-errors': usernameField.invalid }"`
-- `[ngClass]="arrayOfStrings"`
-- `[ngStyle]="{ 'left': player.x, 'top': player.y }"`
-- https://angular.io/guide/template-syntax
-- http://learn.ironhack.com/#/learning_unit/2969
+- [DOCS](https://angular.io/guide/template-syntax)
+- [LU](http://learn.ironhack.com/#/learning_unit/2969)
+- ngIf
+  - `*ngIf="expression"`
+- ngFor
+  - `*ngFor="let item of array"`
+  - `*ngFor="let item of array, let ix = index"`
+  - `*ngFor="let item of array, trackBy: trackFn"`
+- ngSwitch
+  - `[ngSwitch]="expression">`
+  - `*ngSwitchCase="expression"`
+  - `*ngSwitchDefault` 
+- ngClass
+  - use with key value pairs
+    - key is classname
+    - value is expression, apply class if expression is truthy
+    - `[ngClass]="{ 'has-errors': usernameField.invalid }"`
+  - use with array
+    - `[ngClass]="arrayOfStrings"`
+- ngStyle
+  - don't use if you can just toggle css classes with ngClass
+  - `[ngStyle]="{ 'left': player.x, 'top': player.y }"`
