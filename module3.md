@@ -94,9 +94,26 @@
   - input/ngModel variables `<input (keyup)="handleKeyUp(usernameField.value)" ...`
   - ngForm variables `<form (ngSubmit)="addAnimal(form)" ...`
   
+# model/form state
 
+- state is available in `ngForm` AND `ngModel` variables (see template vars above)
+- available properties:
+  - valid
+  - invalid
+  - dirty
+  - pristine
+  - touched
+  - untouched
+  - errors (e.g. `usernameField.errors.minlength`)
 
-# templates
-- *ngFor="let item of array"
-- *ngIf="criteria"
-- *ngForm
+# directives
+- `*ngIf="expression"`
+- `*ngFor="let item of array"`
+- `*ngFor="let item of array, let ix = index"`
+- `*ngFor="let item of array, trackBy: trackFn"`
+- `[ngSwitch]="expression">` + `*ngSwitchCase="expression"` + `*ngSwitchDefault` 
+- `[ngClass]="{ 'has-errors': usernameField.invalid }"`
+- `[ngClass]="arrayOfStrings"`
+- `[ngStyle]="{ 'left': player.x, 'top': player.y }"`
+- https://angular.io/guide/template-syntax
+- http://learn.ironhack.com/#/learning_unit/2969
