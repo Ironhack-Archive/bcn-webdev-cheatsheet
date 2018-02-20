@@ -17,9 +17,9 @@ export class MyFormComponent implements OnInit {
   ngOnInit() {
   }
 
-  submitForm(theForm) {
+  submitForm(form) {
     this.feedbackEnabled = true;
-    if (theForm.valid) {
+    if (form.valid) {
       this.processing = true;
       console.log('here we submit the form', theForm);
       // authService.login(this.username, this.password).
