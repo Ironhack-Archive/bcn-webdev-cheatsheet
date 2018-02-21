@@ -150,7 +150,7 @@
 - [DOCS](https://angular.io/guide/component-interaction)
 - in the child component's class
   - `import { Output, EventEmitter } from '@angular/core'`
-  - `@Output() search = new EventEmitter<string>();`
+  - `@Output() change = new EventEmitter<string>();`
   - you can use `this.change.emit(this.terms)` 
 - in the parent component's template
   - `<app-restaurant-search (change)="handleSearchChange($event)"> ...`
