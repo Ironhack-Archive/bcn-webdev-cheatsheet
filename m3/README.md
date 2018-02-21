@@ -2,6 +2,8 @@
 - SPA
 - Components
 - Injection
+- Singleton
+- Services
 - REST API
 
 # typescript
