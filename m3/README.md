@@ -135,6 +135,8 @@
   - `[ngStyle]="{ 'left': player.x, 'top': player.y }"`
 
 # component inputs
+- [LU](http://learn.ironhack.com/#/learning_unit/2974)
+- [DOCS](https://angular.io/guide/component-interaction)
 - in the child component's class
   - `import { Input } from '@angular/core'`
   - `@Input() restaurant: Object`
@@ -144,6 +146,8 @@
   - `<app-restaurant-card [restaurant]="data">...`
   
 # component outputs
+- [LU](http://learn.ironhack.com/#/learning_unit/2974)
+- [DOCS](https://angular.io/guide/component-interaction)
 - in the child component's class
   - `import { Output, EventEmitter } from '@angular/core'`
   - `@Output() search = new EventEmitter<string>();`
