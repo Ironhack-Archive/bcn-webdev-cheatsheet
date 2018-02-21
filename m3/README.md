@@ -100,7 +100,6 @@
   - ngForm variables `<form (ngSubmit)="addAnimal(form)" ...`
   
 # model/form state
-
 - state is available in `ngForm` AND `ngModel` variables (see template vars above)
 - available properties:
   - valid
@@ -134,3 +133,22 @@
 - ngStyle
   - don't use if you can just toggle css classes with ngClass
   - `[ngStyle]="{ 'left': player.x, 'top': player.y }"`
+
+# component inputs
+- in the child component's class
+  - `import { Input } from '@angular/core'`
+  - `@Input() restaurant: Object`
+  - you can use `this.restaurant` in the component methods
+  - you can use `{{restaurant.name}}` in the component template
+- in the parent component's template
+  - `<app-restaurant-card [restaurant]="data">...`
+  
+# component outputs
+- in the child component's class
+  - `import { Output, EventEmitter } from '@angular/core'`
+  - `@Output() search = new EventEmitter<string>();`
+  - you can use `this.change.emit(this.terms)` 
+- in the parent component's template
+  - `<app-restaurant-search (change)="handleSearchChange($event)"> ...`
+- in the parent component's class
+  - `handleSearchChange(event) { .... }`
