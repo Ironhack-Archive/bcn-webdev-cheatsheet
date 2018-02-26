@@ -1,0 +1,45 @@
+
+/* -- forms -- */
+
+form.is-processing {
+	opacity: 0.5;
+}
+
+form .field {
+	margin-bottom: 20px;
+}
+
+form label {
+	display: block;
+	margin-bottom: 10px;
+	font-style: bold;
+}
+
+form input {
+  padding: 5px;
+  font-size: 16px;
+}
+
+form .submit {
+  padding-top: 20px;
+}
+
+form .submit button {
+  padding: 5px 20px;
+  text-align: center;
+  font-size: 16px;
+  background-color: #27afdc;
+  cursor: pointer;
+}
+
+form .validation {
+  margin: 5px 0 10px;
+  color: red;
+}
+
+form .field.has-error label {
+	color: red;
+}
+form .field.has-error input {
+	border: 1px solid  red;
+}
