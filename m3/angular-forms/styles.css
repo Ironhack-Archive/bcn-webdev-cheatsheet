@@ -16,6 +16,23 @@ form label {
 	font-style: bold;
 }
 
+form input {
+  padding: 5px;
+  font-size: 16px;
+}
+
+form .submit {
+  padding-top: 20px;
+}
+
+form .submit button {
+  padding: 5px 20px;
+  text-align: center;
+  font-size: 16px;
+  background-color: cyan;
+  cursor: pointer;
+}
+
 form .field.has-error label {
 	color: red;
 }

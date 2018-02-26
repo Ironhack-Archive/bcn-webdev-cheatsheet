@@ -8,22 +8,29 @@ import { Component, OnInit } from '@angular/core';
 export class MyFormComponent implements OnInit {
 
   feedbackEnabled = false;
+  error = null;
   processing = false;
-  username = null;
-  password = null;
+  // ... model
 
-  constructor() { }
+  constructor(/* inject required services */) { }
 
   ngOnInit() {
   }
 
   submitForm(form) {
+    this.error = '';
     this.feedbackEnabled = true;
-    if (form.valid) {
-      this.processing = true;
-      console.log('here we submit the form', theForm);
-      // authService.login(this.username, this.password).
-    }
+    this.processing = true;
+      // this.someService.method(... data ...)
+      //   .then((result) => {
+      //     // ... handle result, reset form, etc...
+      //     // ... navigate with this.router.navigate(['...'])
+      //   })
+      //   .catch((err) => {
+      //     this.error = err.error.error; // :-)
+      //     this.processing = false;
+      //     this.feedbackEnabled = false;
+      //   });
   }
 
 }

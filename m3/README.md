@@ -53,7 +53,7 @@
 
 
 # angular CLI
-- ng new
+- ng new name-of-app
 - ng serve
 - ng g c components/...
 - ng g c pages/...
@@ -84,7 +84,7 @@
 - interpolation `{{ expression }}`
 - property binding `<button [disabled]="processing">`
 - event binding `<button (click)="handleClick($event)">`
-- two way binding 
+- two way binding
   - add `import { FormsModule } from '@angular/forms';` to `app.module.ts`
   - add `imports: [ ... FormsModule, ... ]` to `app.module.ts`
   - `<input type="text" [(ngModel)]="username" />`
@@ -100,7 +100,7 @@
 - passed from template to component class
   - input/ngModel variables `<input (keyup)="handleKeyUp(usernameField.value)" ...`
   - ngForm variables `<form (ngSubmit)="addAnimal(form)" ...`
-  
+
 # model/form state
 - state is available in `ngForm` AND `ngModel` variables (see template vars above)
 - available properties:
@@ -124,7 +124,7 @@
 - ngSwitch
   - `[ngSwitch]="expression">`
   - `*ngSwitchCase="expression"`
-  - `*ngSwitchDefault` 
+  - `*ngSwitchDefault`
 - ngClass
   - use with key value pairs
     - key is classname
@@ -136,9 +136,24 @@
   - don't use if you can just toggle css classes with ngClass
   - `[ngStyle]="{ 'left': player.x, 'top': player.y }"`
 
+# component hierarchy
+- components can be nested
+- top level components we call "page" components (convention)
+- generate "page" components with `ng g c pages/login-page`
+- generate "other" components with `ng g c components/auth-login-form`
+- always route to a "page" component
+- concetrate responsibilities in "page" components (e.g.: talk to services that connect to the API)
+- keep the "other" components simple
+- component inp
+  - `[input]="data"`
+  - send data from parent components to child components
+- component outputs
+  - `(output)="handleFunction($event)"`
+  - listen in parent components to events emitted from child components
+
 # component inputs
-- [LU](http://learn.ironhack.com/#/learning_unit/2974)
 - [DOCS](https://angular.io/guide/component-interaction)
+- [LU](http://learn.ironhack.com/#/learning_unit/2974)
 - in the child component's class
   - `import { Input } from '@angular/core'`
   - `@Input() restaurant: Object`
@@ -146,15 +161,24 @@
   - you can use `{{restaurant.name}}` in the component template
 - in the parent component's template
   - `<app-restaurant-card [restaurant]="data">...`
-  
+
 # component outputs
-- [LU](http://learn.ironhack.com/#/learning_unit/2974)
 - [DOCS](https://angular.io/guide/component-interaction)
+- [LU](http://learn.ironhack.com/#/learning_unit/2974)
 - in the child component's class
   - `import { Output, EventEmitter } from '@angular/core'`
   - `@Output() change = new EventEmitter<string>();`
-  - you can use `this.change.emit(this.terms)` 
+  - you can use `this.change.emit(this.terms)`
 - in the parent component's template
   - `<app-restaurant-search (change)="handleSearchChange($event)"> ...`
 - in the parent component's class
   - `handleSearchChange(event) { .... }`
+
+# pipes
+
+# services (injectables)
+- generate with `ng g s services/name`
+
+# http
+
+# REST API
