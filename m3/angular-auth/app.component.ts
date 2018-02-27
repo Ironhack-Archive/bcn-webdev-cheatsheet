@@ -27,18 +27,6 @@ export class AppComponent implements OnInit {
     });
   }
 
-  login() {
-    this.router.navigate(['/login']);
-  }
-
-  signup() {
-    this.router.navigate(['/signup']);
-  }
-
-  profile() {
-    this.router.navigate(['/profile']);
-  }
-
   logout() {
     this.authService.logout()
       .then(() => this.router.navigate(['/login']));

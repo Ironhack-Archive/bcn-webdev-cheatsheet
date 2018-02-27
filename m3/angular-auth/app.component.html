@@ -6,12 +6,12 @@
         <span class="username text">loading...</span>
       </div>
       <div *ngIf="!loading && !!user">
-        <a (click)="profile()">{{user.username}}</a>
-        <a (click)="logout()">logout</a>
+        <a [routerLink]="['/profile']">{{user.username}}</a>
+        <a [routerLink]="['/logout']">logout</a>
       </div>
       <div *ngIf="!loading && anon">
-        <a (click)="login()">login</a>
-        <a (click)="signup()">signup</a>
+        <a [routerLink]="['/login']">login</a>
+        <a [routerLink]="['/signup']">signup</a>
       </div>
     </div>
 

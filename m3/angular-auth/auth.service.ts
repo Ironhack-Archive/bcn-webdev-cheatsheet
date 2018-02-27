@@ -24,33 +24,6 @@ export class AuthService {
     return user;
   }
 
-  signup(user: any): Promise<any> {
-    const options = {
-      withCredentials: true
-    };
-    return this.httpClient.post(`${this.API_URL}/signup`, user, options)
-      .toPromise()
-      .then((data) => this.setUser(data));
-  }
-
-  login(user: any): Promise<any> {
-    const options = {
-      withCredentials: true
-    };
-    return this.httpClient.post(`${this.API_URL}/login`, user, options)
-      .toPromise()
-      .then((data) => this.setUser(data));
-  }
-
-  logout(): Promise<any> {
-    const options = {
-      withCredentials: true
-    };
-    return this.httpClient.post(`${this.API_URL}/logout`, {}, options)
-      .toPromise()
-      .then(() => this.setUser());
-  }
-
   me(): Promise<any> {
     const options = {
       withCredentials: true
@@ -63,6 +36,33 @@ export class AuthService {
           this.setUser();
         }
       });
+  }
+
+  login(user: any): Promise<any> {
+    const options = {
+      withCredentials: true
+    };
+    return this.httpClient.post(`${this.API_URL}/login`, user, options)
+      .toPromise()
+      .then((data) => this.setUser(data));
+  }
+
+  signup(user: any): Promise<any> {
+    const options = {
+      withCredentials: true
+    };
+    return this.httpClient.post(`${this.API_URL}/signup`, user, options)
+      .toPromise()
+      .then((data) => this.setUser(data));
+  }
+
+  logout(): Promise<any> {
+    const options = {
+      withCredentials: true
+    };
+    return this.httpClient.post(`${this.API_URL}/logout`, {}, options)
+      .toPromise()
+      .then(() => this.setUser());
   }
 
   getUser(): any {

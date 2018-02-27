@@ -110,3 +110,4 @@ const routes: Routes = [
   { path: '**', redirectTo: '' }
 ];
 
+// don't forget to register the guards (and the AuthService) in the providers

@@ -12,12 +12,18 @@ export class MyService {
   constructor(private httpClient: HttpClient) { }
 
   getList(): Promise<any> {
-    return this.httpClient.get(`${this.baseUrl}/restaurants`)
+    const options = {
+      withCredentials: true
+    };
+    return this.httpClient.get(`${this.baseUrl}/restaurants`, options)
       .toPromise();
   }
 
   getOneById(id: string): Promise<any> {
-    return this.httpClient.get(`${this.baseUrl}/restaurants/${id}`)
+    const options = {
+      withCredentials: true
+    };
+    return this.httpClient.get(`${this.baseUrl}/restaurants/${id}`, options)
       .toPromise();
   }
 
