@@ -82,8 +82,8 @@ import { environment } from '../../environments/environment';
 const apiUrl = environment.apiUrl + '/name-of-resource';
 ```
 
-- use that `baseUrl` in all methods
-
+- use that `apiUrl` in all methods
+  
 
 ## testing against the heroku backend
 
