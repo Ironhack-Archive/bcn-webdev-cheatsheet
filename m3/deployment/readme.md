@@ -24,7 +24,7 @@ CLIENT_URL=http://localhost:4200
 
 ```
 MONGODB_URI=...
-CLIENT_URL=http://foobar.herokuapp.com
+CLIENT_URL=https://foobar.herokuapp.com
 ```
 
 # frontend
