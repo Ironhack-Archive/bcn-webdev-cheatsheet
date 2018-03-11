@@ -24,7 +24,7 @@ CLIENT_URL=http://localhost:4200
 
 ```
 MONGODB_URI=...
-CLIENT_URL=http://foobar.herokuapp.com
+CLIENT_URL=https://foobar.herokuapp.com
 ```
 
 
@@ -85,8 +85,8 @@ import { environment } from '../../environments/environment';
 const apiUrl = environment.apiUrl + '/name-of-resource';
 ```
 
-- use that `baseUrl` in all methods
-
+- use that `apiUrl` in all methods
+  
 
 ## testing against the heroku backend
 
