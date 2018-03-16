@@ -1,5 +1,6 @@
 # Advanced
 
+
 ## HTTP
 
 - [CORS Intro](https://www.html5rocks.com/en/tutorials/cors/)
@@ -24,6 +25,17 @@
 ## Javascript
 
 
+### Unit Testing
+
+- [Mocha & Chai](http://mherman.org/blog/2015/09/10/testing-node-js-with-mocha-and-chai)
+  - [Mocha](https://mochajs.org/)
+  - [Chai](http://www.chaijs.com/)
+  - [Sinon](http://sinonjs.org/)
+- [Jasmine & Karma](https://codecraft.tv/courses/angular/unit-testing/jasmine-and-karma/)
+  - [Karma](https://karma-runner.github.io/2.0/index.html)
+  - [Jasmine](https://jasmine.github.io/)
+
+
 ### ES6+
 
 - [ES7 features](http://kangax.github.io/compat-table/es2016plus/)
@@ -32,8 +44,8 @@
 
 ### Errors
 
-http://goldbergyoni.com/checklist-best-practices-of-node-js-error-handling/
-https://www.joyent.com/node-js/production/design/errors
+- [Node.js Error Handling Best Practices](http://goldbergyoni.com/checklist-best-practices-of-node-js-error-handling/)
+- [Error Handling in Node.js](https://www.joyent.com/node-js/production/design/errors)
 
 
 ### Async
@@ -49,6 +61,8 @@ https://www.joyent.com/node-js/production/design/errors
 
 ## Node.js
 
+- [How the Event Loop REALLY Works](https://webapplog.com/event-loop/)
+
 
 ### Architecture
 
@@ -57,11 +71,17 @@ https://www.joyent.com/node-js/production/design/errors
 - [Lean cArchitecture](https://herbertograca.com/category/development/book-notes/lean-architecture-by-james-coplien-and-gertrud-bjornvig/)
 - [Architecture 1st Step - Partitioning](https://herbertograca.com/2017/03/06/architecture-1st-design-step-partitioning/#more-7827)
 
+
+### Templating
+
+- [Top Engines](https://colorlib.com/wp/top-templating-engines-for-javascript/)
+- [HBS](http://tryhandlebarsjs.com/)
+
+
 ## Databases
 
 
 ### Mongoose
-
 
 
 ## Devops
@@ -78,4 +98,4 @@ https://www.joyent.com/node-js/production/design/errors
 
 ### Secret Management
 
-https://gist.github.com/maxvt/bb49a6c7243163b8120625fc8ae3f3cd
+- [Secret Management Tools](https://gist.github.com/maxvt/bb49a6c7243163b8120625fc8ae3f3cd)

@@ -3,6 +3,11 @@
 
 ## Tools
 
+### Frontend
+
+- [Webpack](https://webpack.js.org/)
+- [Sonarwhal](https://sonarwhal.com/scanner)
+
 ### UX
 
 - [Hot Jar](https://www.hotjar.com/tour)
@@ -18,8 +23,6 @@
 - [Adobe Analytics](https://www.adobe.com/data-analytics-cloud/analytics.html)
 
 
-## Agile
-
 
 ## Documentation
 
@@ -27,13 +30,12 @@
 ## Tutorials
 
 
-## Libraries and Frameworks
-
-
-## People
+## Libraries
 
 
 ## Websites
+
+- [Software Architecture Chronicles](https://medium.com/the-software-architecture-chronicles)
 
 
 ## Youtube Channels
