@@ -14,7 +14,7 @@
 - Injection
 
 
-### JWT
+### JWTf
 
 - [JWT Intro](https://jwt.io/introduction/)
 - [JWT for SPA](https://stormpath.com/blog/token-auth-spa)
@@ -31,9 +31,6 @@
   - [Mocha](https://mochajs.org/)
   - [Chai](http://www.chaijs.com/)
   - [Sinon](http://sinonjs.org/)
-- [Jasmine & Karma](https://codecraft.tv/courses/angular/unit-testing/jasmine-and-karma/)
-  - [Karma](https://karma-runner.github.io/2.0/index.html)
-  - [Jasmine](https://jasmine.github.io/)
 
 
 ### ES6+
@@ -68,7 +65,7 @@
 
 - [Clean Code Javascript](https://github.com/ryanmcdermott/clean-code-javascript)
 - [Node.js Best Practices](https://blog.codeminer42.com/nodejs-and-good-practices-354e7d763626)
-- [Lean cArchitecture](https://herbertograca.com/category/development/book-notes/lean-architecture-by-james-coplien-and-gertrud-bjornvig/)
+- [Lean Architecture](https://herbertograca.com/category/development/book-notes/lean-architecture-by-james-coplien-and-gertrud-bjornvig/)
 - [Architecture 1st Step - Partitioning](https://herbertograca.com/2017/03/06/architecture-1st-design-step-partitioning/#more-7827)
 
 

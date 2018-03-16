@@ -13,6 +13,14 @@
 ## Frontend/UI
 
 
+### Testing
+
+- [Jasmine & Karma](https://codecraft.tv/courses/angular/unit-testing/jasmine-and-karma/)
+  - [Karma](https://karma-runner.github.io/2.0/index.html)
+  - [Jasmine](https://jasmine.github.io/)
+- [Protractor]
+- [BDD and Cucumber]
+
 ### Styleguide Driven Development
 
 - [Styleguide Driven Development](http://www.styleguidedrivendevelopment.com/)

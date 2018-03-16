@@ -17,4 +17,4 @@
 
 ## Ideas
 
-- youtube video spectrum games
+- [retro 8bit](https://www.youtube.com/watch?v=Fugbn_PExSg)

@@ -8,7 +8,10 @@
 
 ## CSS
 
+- [CSS Guidelines](https://cssguidelin.es)
 - [OOCSS](http://oocss.org/)
+- [SMACSS](https://smacss.com/)
+- [BEM](http://getbem.com/introduction/)
 - [Web Typography](http://webtypography.net/)
 - [Vertical Grid](https://24ways.org/2006/compose-to-a-vertical-rhythm/)
 - [Baseline Grid](http://joshnh.com/weblog/how-to-set-up-a-baseline-grid/)

@@ -16,7 +16,8 @@
 ## Extra Features
 
 - 2 roles / types of users
--
+- location and maps
+- OAuths
 
 ## Ideas
 
