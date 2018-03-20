@@ -48,21 +48,24 @@
 - binding/unbinding event listeners
 
 ## concepts css
-- selector
-- property, value
-- specifity
-- pseudo-selector
-- user agent styles
-- reset
-- layout
-- typography
-- responsive web design
-- liquid
-- mobile first
-- box model
-- transition
-- animation
-- flexbox
+- [syntax](https://ironion.com/blog/2015/06/12/anatomy-of-a-css-rule/)
+  - rule
+  - selector
+  - declaration: property, value
+  - specifity
+  - pseudo-selector
+- and more: 
+  - user agent styles
+  - reset
+  - layout
+  - typography
+  - responsive web design
+  - liquid
+  - mobile first
+  - box model
+  - transition
+  - animation
+  - flexbox (and css grid...)
 
 ## concepts git
 - control version
@@ -100,8 +103,12 @@
   - switch (expression) { case "foo": ... ; break; }
 
 
-## best practices
+# best practices
 
+## html/css
+
+- MOBILE first
+  - unless desktop only
 - HTML first
   - sketch first
   - add ids/classes 
