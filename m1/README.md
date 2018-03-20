@@ -98,3 +98,43 @@
   - while (condition) { ... }
   - do { ... } while (condition) 
   - switch (expression) { case "foo": ... ; break; }
+
+
+# css
+
+## best practices
+
+- HTML first
+  - sketch first
+  - add ids/classes 
+  - div { border: 1px solid black } to visualise structure
+  - css later
+- DRY
+  - use composition - e.g.: combine classes `class="article container"` 
+  - use cascading - specifics override generics
+  - use inheritance -  
+- LESS is MORE
+  - avoid px widths, 
+  - avoid heights
+  - margin bottom / padding top
+- DO
+  - semantic html, the right tags for the right job
+    - e.g.: `nav`, `header`, `ul`, `strong`
+  - semantic css, classes named after what things ARE not what they LOOK LIKE
+    - e.g.: `.copy`, `.site-header`, `.copyright`, `.email` ...
+  - solve problems / compensate as close as possible to the origin of the problem
+  - short selectors
+    - e.g.: `.header li`
+- DON'T
+  - use only `<div>` and `<span>`
+  - use `<br/>` unless poetry
+  - use `! important`
+  - name classes after presentation
+    - e.g.: `class="green-text"`
+  - add empty tags just because you need to apply some style
+    - e.g.: `<div class="clear"></div>`
+  - long selectors
+    - e.g.: `.header div ul li`
+- clearing floats
+  - `overflow: hidden` on the parent
+  - OR `clear: both` on a sibling after the floats
