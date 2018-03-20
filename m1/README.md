@@ -100,8 +100,6 @@
   - switch (expression) { case "foo": ... ; break; }
 
 
-# css
-
 ## best practices
 
 - HTML first
