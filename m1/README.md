@@ -100,11 +100,22 @@
 
 ## operators
 
-- arithmetic: `+ - * / % **`
-- operators: `= += -= *= /= %= **=`
-- boolean: `&& || !`
+- [comparison](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Comparison): `== === != !== > < >= <=`
+- [logical](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Logical): `&& || !`
+- logical and short-circuit: 
+  - `0 && notExecuted` evaluates to `0`
+  - `1 || notExecuted` evaluates to `1`
+- [string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#String) `+`
+- [arithmetic](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Arithmetic): `+ - * / % ** ++ --`
+- [bitwise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Bitwise): `& | ^ ~ << >> >>>`
+- [assignment](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Assignment): `= += -= *= /= %= **=`
+- [trenary](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Conditional): `var a = (condition) ? this : orThat`
 - precedence: PEMDAS
-- typeof
+- unary 
+  - typeof `typeof var`
+  - delete `delete var.property`
+  - in `property in obj`
+  - instanceof `var instanceof Constructor`
 
 ## control structures
 
