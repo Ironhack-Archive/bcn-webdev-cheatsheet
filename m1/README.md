@@ -11,6 +11,7 @@
   - behaviour: js
 
 ## concepts js
+
 - run time environment
 - expression
 - statement
@@ -37,6 +38,7 @@
 - composition
 
 ## concepts html
+
 - dom tree
 - dom node
 - root, ancestor, descendent, parent, child, sibling
@@ -48,6 +50,7 @@
 - binding/unbinding event listeners
 
 ## concepts css
+
 - [syntax](https://ironion.com/blog/2015/06/12/anatomy-of-a-css-rule/)
   - rule
   - selector
@@ -68,6 +71,7 @@
   - flexbox (and css grid...)
 
 ## concepts git
+
 - control version
 - status
 - staging
@@ -77,36 +81,96 @@
 - merge
 
 ## concepts tools
+
 - linting
 - beautifying
 
 # javascript
 
 - var x = 1;
-- types:
-  - number: 1 1.3 Infinity NaN
-  - boolean: true false
-  - string: "hello world"
-  - object
-  - function
-  - undefined
-- arithmetic operators: `+ - * / % **`
-- assignment operators: `= += -= *= /= %= **=`
-- boolean operators: `&& || !`
-- operator precedence: PEMDAS
-- typeof operator
-- control structures:
-  - if (expression) { ... } else { ... }
-  - for (initialize; condition; modify ) { ... }
-  - while (condition) { ... }
-  - do { ... } while (condition) 
-  - switch (expression) { case "foo": ... ; break; }
 
+## types
+
+- number: 1 1.3 Infinity NaN
+- boolean: true false
+- string: "hello world"
+- object
+- function
+- undefined
+
+## operators
+
+- arithmetic: `+ - * / % **`
+- operators: `= += -= *= /= %= **=`
+- boolean: `&& || !`
+- precedence: PEMDAS
+- typeof
+
+## control structures:
+
+- if (expression) { ... } else if (expression) { ... } else { ... }
+- for (initialize; condition; modify ) { ... }
+- while (condition) { ... }
+- do { ... } while (condition) 
+- switch (expression) { case "foo": ... ; break; }
+- try { ... } catch (err) { ... } 
+
+## arrays
+
+- holds a list of values
+- var arr = ['1', '2', '3'];
+- var arr = new Array();
+- arr.length
+- arr[index]
+- arr[index] = 'foo'
+- arr.pop()
+- arr.push('4', '5')
+- arr.unshift('foo')
+- arr.shift()
+- arr.forEach( callback )
+- arr.map( callback )
+- arr.reduce( callback )
+- arr.filter( callback )
+- arr.sort( callback )
+- arr.reverse()
+- arr.splice(1, 2)
+- arr.splice(1, 0, 'foo')
+- arr.slice(1, 2)
+
+## objects
+
+- holds key value pairs
+- var obj = { name: 'foo' }
+- obj.name = 'foo'
+- obj['name-with-weird-characters'] = 'foo'
+- obj[key] = 'foo'
+- delete obj.name
+- delete obj['name-with-weird-characters']
+- delete obj[key]
+- Object.keys(obj);
+- Object.values(obj);
+- for (var key in obj) { ... }
 
 # best practices
 
+## javascript
+
+- start all files `'use strict';` [docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode)
+- small functions
+- conventions 
+  - literal strings, use `'single quotes'`
+  - one statement per line (don't do `if (foo) { something() } ` all in one line)
+  - variables and function parameters use `camelCase` 
+  - functions, start with a verb, use `verbCamelCase`
+  - for constructors use `PascalCase`
+
 ## html/css
 
+- include `meta` to stop browser from zooming in `<head>`
+- start your css with a reset of user-agent styles (at least box-model and body margin)
+- conventions
+  - use double quotes
+  - IDs and classes `kebab-case`
 - MOBILE first
   - unless desktop only
 - HTML first
