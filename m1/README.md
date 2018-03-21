@@ -106,7 +106,7 @@
 - precedence: PEMDAS
 - typeof
 
-## control structures:
+## control structures
 
 - if (expression) { ... } else if (expression) { ... } else { ... }
 - for (initialize; condition; modify ) { ... }
@@ -150,6 +150,18 @@
 - Object.keys(obj);
 - Object.values(obj);
 - for (var key in obj) { ... }
+
+## functions
+
+- function doSomething(param1, param2) { return .... }
+- var doSomething = function (...) { ... } 
+- typeof doSomething // 'function'
+- advanced:
+  - function doFoo() { console.log(arguments) }
+  - function doFoo() { console.log(this) }
+  - doFoo.call(otherThis, arg1, arg2)
+  - doFoo.apply(otherThis, [arg1, arg2])
+  - dooFoo.name
 
 # best practices
 
