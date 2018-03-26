@@ -139,6 +139,7 @@
 - arr.unshift('foo')
 - arr.shift()
 - arr.forEach( callback )
+- arr.find( callback )
 - arr.map( callback )
 - arr.reduce( callback )
 - arr.filter( callback )
@@ -202,6 +203,14 @@
 - event.target
 - event.currentTarget
 
+## async
+
+- timeoutId = setTimeout(func, 1000)
+- clearTimeout(timeoutId)
+- intervalId = setInterval(func, 1000)
+- clearInterval(intervalId)
+
+
 # best practices
 
 ## javascript
@@ -214,13 +223,15 @@
   - variables and function parameters use `camelCase`
   - functions, start with a verb, use `verbCamelCase`
   - for constructors use `PascalCase`
+- DON'T
+  - use global variables
 
 ## html/css
 
 - include `meta` to stop browser from zooming in `<head>`
 - start your css with a reset of user-agent styles (at least box-model and body margin)
 - conventions
-  - use double quotes
+  - use double quotes around html attributes
   - IDs and classes `kebab-case`
 - MOBILE first
   - unless desktop only
@@ -232,7 +243,7 @@
 - DRY
   - use composition - e.g.: combine classes `class="article container"`
   - use cascading - specifics override generics
-  - use inheritance -
+  - use inheritance - type attributes (font-family, font-size, line-height, color, ...) trickle down from parent to children
 - LESS is MORE
   - avoid px widths,
   - avoid heights
