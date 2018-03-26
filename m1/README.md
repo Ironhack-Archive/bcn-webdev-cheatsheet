@@ -189,7 +189,7 @@
 - node.children[0]...
 - node.remove()
 - node = document.createElement('div')
-- node.innerHTML = '<p>some text</p>'
+- node.innerHTML = `'<p>some text</p>'`
 - node.innerText = 'some text'
 
 ## events
