@@ -194,8 +194,8 @@
 
 ## events
 
-- document.addEventListener('click', handleClick);
-- document.removeEventListener('click', handleClick);
+- node.addEventListener('click', handleClick);
+- node.removeEventListener('click', handleClick);
 - function handleClick(event) { ... }
 - event.stopPropagation();
 - event.preventDefault();
