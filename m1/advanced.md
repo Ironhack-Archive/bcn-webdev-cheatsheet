@@ -17,22 +17,11 @@
 - [Baseline Grid](http://joshnh.com/weblog/how-to-set-up-a-baseline-grid/)
 
 
-## Responsive Web Design
-
-- [Mobile first 2010](https://www.lukew.com/ff/entry.asp?1117)
-- [The many faces of mobile first 2012](http://bradfrost.com/blog/mobile/the-many-faces-of-mobile-first/)
-- [Media queries mobile first 2014](https://zellwk.com/blog/how-to-write-mobile-first-css/)
-- [Responsive Web Design Basics](https://developers.google.com/web/fundamentals/design-and-ux/responsive/)
-- [Media queries in 2018](https://www.smashingmagazine.com/2018/02/media-queries-responsive-design-2018/)
-- [Responsive Design Patterns](https://uxplanet.org/responsive-design-best-practices-c6d3f5fd163b)
-- [Responsive images](https://css-tricks.com/responsive-images-css/)
-
-
 ## Flexbox & Grid
 
 - [Complete Flexbox Guide](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+- [Flexbox Cheatsheet](http://jonibologna.com/content/images/flexboxsheet.pdf)
 - [Flexbox Game](http://flexboxfroggy.com/)
-
 - [Flexbox vs Grid](https://medium.com/@lauren.kroner/flexbox-vs-css-grid-6a94547b6c06)
 
 
@@ -46,8 +35,16 @@
 - [Responsive font-size](http://codeitdown.com/responsive-font-size-css/)
 - [Fluid Typography](https://css-tricks.com/snippets/css/fluid-typography/)
 
-## Responsive
 
+## Responsive Web Design
+
+- [Mobile first 2010](https://www.lukew.com/ff/entry.asp?1117)
+- [The many faces of mobile first 2012](http://bradfrost.com/blog/mobile/the-many-faces-of-mobile-first/)
+- [Media queries mobile first 2014](https://zellwk.com/blog/how-to-write-mobile-first-css/)
+- [Responsive Web Design Basics](https://developers.google.com/web/fundamentals/design-and-ux/responsive/)
+- [Media queries in 2018](https://www.smashingmagazine.com/2018/02/media-queries-responsive-design-2018/)
+- [Responsive Design Patterns](https://uxplanet.org/responsive-design-best-practices-c6d3f5fd163b)
+- [Responsive images](https://css-tricks.com/responsive-images-css/)
 - [Responsive Tables](https://dbushell.com/2012/01/05/responsive-tables-2/)
 
 

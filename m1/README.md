@@ -57,7 +57,7 @@
   - declaration: property, value
   - specifity
   - pseudo-selector
-- and more: 
+- and more:
   - user agent styles
   - reset
   - layout
@@ -102,7 +102,7 @@
 
 - [comparison](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Comparison): `== === != !== > < >= <=`
 - [logical](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Logical): `&& || !`
-- logical and short-circuit: 
+- logical and short-circuit:
   - `0 && notExecuted` evaluates to `0`
   - `1 || notExecuted` evaluates to `1`
 - [string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#String) `+`
@@ -111,7 +111,7 @@
 - [assignment](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Assignment): `= += -= *= /= %= **=`
 - [trenary](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Conditional): `var a = (condition) ? this : orThat`
 - precedence: [PEMDAS](http://materials.ironhack.com/s/SJeTS3zrYf#operator-precedence)
-- unary 
+- unary
   - typeof `typeof var`
   - delete `delete var.property`
   - in `property in obj`
@@ -122,9 +122,9 @@
 - if (expression) { ... } else if (expression) { ... } else { ... }
 - for (initialize; condition; modify ) { ... }
 - while (condition) { ... }
-- do { ... } while (condition) 
+- do { ... } while (condition)
 - switch (expression) { case "foo": ... ; break; }
-- try { ... } catch (err) { ... } 
+- try { ... } catch (err) { ... }
 
 ## arrays
 
@@ -165,7 +165,7 @@
 ## functions
 
 - function doSomething(param1, param2) { return .... }
-- var doSomething = function (...) { ... } 
+- var doSomething = function (...) { ... }
 - typeof doSomething // 'function'
 - advanced:
   - function doFoo() { console.log(arguments) }
@@ -174,16 +174,44 @@
   - doFoo.apply(otherThis, [arg1, arg2])
   - dooFoo.name
 
+## dom
+
+- window.document
+- window.onload = function () { ... }
+- document.body
+- document.getElementById('site-header')
+- document.getElementsByClassName('feature')
+- document.querySelector('.features .feature')
+- document.querySelectorAll('.features .feature')
+- node.setAttribute('disabled', 'disabled')
+- node.classList.add()
+- node.appendChild(child)
+- node.children[0]...
+- node.remove()
+- node = document.createElement('div')
+- node.innerHTML = '<p>some text</p>'
+- node.innerText = 'some text'
+
+## events
+
+- document.addEventListener('click', handleClick);
+- document.removeEventListener('click', handleClick);
+- function handleClick(event) { ... }
+- event.stopPropagation();
+- event.preventDefault();
+- event.target
+- event.currentTarget
+
 # best practices
 
 ## javascript
 
 - start all files `'use strict';` [docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode)
 - small functions
-- conventions 
+- conventions
   - literal strings, use `'single quotes'`
   - one statement per line (don't do `if (foo) { something() } ` all in one line)
-  - variables and function parameters use `camelCase` 
+  - variables and function parameters use `camelCase`
   - functions, start with a verb, use `verbCamelCase`
   - for constructors use `PascalCase`
 
@@ -198,15 +226,15 @@
   - unless desktop only
 - HTML first
   - sketch first
-  - add ids/classes 
+  - add ids/classes
   - div { border: 1px solid black } to visualise structure
   - css later
 - DRY
-  - use composition - e.g.: combine classes `class="article container"` 
+  - use composition - e.g.: combine classes `class="article container"`
   - use cascading - specifics override generics
-  - use inheritance -  
+  - use inheritance -
 - LESS is MORE
-  - avoid px widths, 
+  - avoid px widths,
   - avoid heights
   - margin bottom / padding top
 - DO
