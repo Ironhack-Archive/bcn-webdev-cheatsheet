@@ -23,7 +23,8 @@
 - [Flexbox Cheatsheet](http://jonibologna.com/content/images/flexboxsheet.pdf)
 - [Flexbox Game](http://flexboxfroggy.com/)
 - [Flexbox vs Grid](https://medium.com/@lauren.kroner/flexbox-vs-css-grid-6a94547b6c06)
-
+- [Grid Reference](https://cssreference.io/css-grid/)
+- [Advanced Grid Techniques](https://css-tricks.com/things-ive-learned-css-grid-layout/)
 
 ## Typography
 
