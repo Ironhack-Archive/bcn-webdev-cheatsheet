@@ -3,7 +3,8 @@
 ## Reference project
 
 - 3 states
-- 2 classes
+- main.js
+- game.js
 - restart
 
 ## Planing
@@ -11,6 +12,7 @@
 - states
 - views
 - data structures
+- backlog
 
 ## Extra Features
 
