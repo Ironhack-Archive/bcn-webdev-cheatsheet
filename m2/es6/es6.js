@@ -1,5 +1,5 @@
 // -- ARROW FUNCTIONS --
-function doSomething('someparam', (param1, param2) => {
+const doSomething = ('someparam', (param1, param2) => {
     ...
     return result;
 });
