@@ -64,6 +64,23 @@
 }
 ```
 
+# http
+- request, response
+- request = headers + body (optional)
+- response = headers + body (optional)
+- url
+  - `https://localhost:3000/homepage?foo=bar&baz=123#fragment`
+  - `scheme://hostname:port/path?querystring` 
+  - fragment is never sent to the server
+- method: GET, POST, PUT, DELETE [and others](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods)
+- [status codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status):
+  - 2xx - success (e.g. 200 OK, 204 No Content)
+  - 3xx - redirection (e.g. 301 moved permanently)
+    - used with response header `Location: http://....` indicating where it moved too
+  - 4xx - user error (e.g.: 404 not found, 401 not authorized)
+  - 5xx - server error (e.g.: 500 internal error, 504 timeout)
+
+
 # nodemon
 - npm install -g nodemon
 - nodemon --inspect app.js
