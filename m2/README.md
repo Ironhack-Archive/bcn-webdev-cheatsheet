@@ -139,6 +139,7 @@
 - db.collectionName.help()
 - db.collectionName.find().pretty()
 - db.collectionName.insert({})
+- [read operations](https://docs.mongodb.com/manual/crud/#read-operations)
 
 # mongo import
 - mongoimport  --db databaseName  --collection collectionName --file fileName
