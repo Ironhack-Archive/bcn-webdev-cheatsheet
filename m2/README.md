@@ -135,10 +135,11 @@
 - show dbs
 - use databaseName
 - db.help()
+- db.createCollection("animals")
 - show collections
-- db.collectionName.help()
-- db.collectionName.find().pretty()
-- db.collectionName.insert({})
+- db.animals.help()
+- db.animals.find().pretty()
+- db.animals.insert({})
 - [read operations](https://docs.mongodb.com/manual/crud/#read-operations)
 
 # mongo import
