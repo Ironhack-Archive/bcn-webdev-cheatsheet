@@ -1,11 +1,17 @@
 // require npm packages
+const path = require('path');
+const express = require('express');
+const bodyParser = require('body-parser');
 
 // require your own modules (router, models)
+
 // create app connect to db
 
 // -- setup the app
 
 // configure middlewares (static, session, cookies, body, ...)
+app.use(express.static('public'));
+app.use(bodyParser.urlencoded({ extended: true }));
 
 // -- routes
 
