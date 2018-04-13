@@ -90,6 +90,7 @@
 
 
 # express generator
+- [docs](https://expressjs.com/en/starter/generator.html)
 - npm install -g express-generator
 - express my-project --view=ejs --git
 - add start-dev to package.json scripts
@@ -97,6 +98,7 @@
 - add .eslintrc.json (eslint --init)
 - git init
 - add .gitignore with node_modules
+- add our [error handling snippets](./express-apps/app.js) to app.js 
 
 # express
 - http server framework
