@@ -1,6 +1,6 @@
 // -- middleware after passport init, before routes
 
 app.use((req, res, next) => {
-  res.locals.user = req.user;
+  req.locals.user = req.user;
   next();
 });
