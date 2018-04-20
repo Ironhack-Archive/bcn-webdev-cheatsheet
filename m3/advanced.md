@@ -47,6 +47,12 @@
 - [Nucleus](https://holidaypirates.github.io/nucleus/)
 
 
+### Web Components
+
+- [Web Components](https://www.webcomponents.org/)
+- [Polymer](https://medium.com/@oneeezy/frameworks-vs-web-components-9a7bd89da9d4)
+
+
 ## Cloud
 
 
