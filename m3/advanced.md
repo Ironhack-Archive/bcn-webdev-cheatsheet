@@ -45,6 +45,7 @@
 - [SC5](http://styleguide.sc5.io/)
 - [Hologram](https://trulia.github.io/hologram/)
 - [Nucleus](https://holidaypirates.github.io/nucleus/)
+- [Zepplin](https://zeplin.io/)
 
 
 ### Web Components
