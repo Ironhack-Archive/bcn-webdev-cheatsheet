@@ -3,6 +3,10 @@
 
 ## Tools
 
+### Angular
+
+- [Modules](https://ngx.tools)
+
 ### Frontend
 
 - [Webpack](https://webpack.js.org/)
