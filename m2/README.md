@@ -159,7 +159,7 @@
 - create heroku account
   - it's a cloud platform for hosting apps
   - https://signup.heroku.com/
-- create applicattion
+- create application
   - provide a name (it will be the url https://app-name.herokuapp.com)
 - install [heroku CLI](https://devcenter.heroku.com/articles/heroku-cli)
   - download here: https://devcenter.heroku.com/articles/heroku-cli
