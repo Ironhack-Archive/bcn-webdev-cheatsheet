@@ -186,14 +186,24 @@
   - `$ heroku addons:open mongolab`
   - `$ heroku config:get MONGODB_URI`
 
-- OR create detabase in [MLAB](https://mlab.com/)
-  - ...
-  
+- OR create database in [MLAB](https://mlab.com/)
+  - sign up
+  - create new MongoDB Deployment
+    - cloud provider
+    - free account
+    - provide a name
+    - submit
+    - wait until the database is created
+    - add "admin" user database
+
+```
+mongodb://myuser:mypassword@ds255309.mlab.com:11309/ironhack-database
+```
 - configure app
-  - REMOVE ALL API KEYS (e.g. facebook secret) FROM YOUR CODE!!!!
-  - `$ npm install --save dotenv`
-  - add `require('dotenv').config();` to app.js
-  - create `.env` file (adds fake environment variables to `process.env`)
+  - REMOVE ALL API KEYS (e.g. facebook secret) FROM YOUR CODE
+  - `$ npm install --save dotenv`
+  - add `require('dotenv').config();` to app.js
+  - create `.env` file (adds fake environment variables to `process.env`)
   - add `.env` to `.gitignore`
   - replace hardcoded mongodb URI with process env variable in app.js
 
