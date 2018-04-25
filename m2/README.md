@@ -156,28 +156,50 @@
 
 # heroku
 - http://learn.ironhack.com/#/learning_unit/2233
-- Is a cloud platform for hosting apps
-- https://signup.heroku.com/?c=70130000001x9jEAAQ
-- heroku login
-- heroku git:remote -a projectName
-- package.json
-  - "start": "node ./bin/www"
-  - npm & node engines
-- git push heroku master
-- heroku logs
-- heroku addons:create mongolab:sandbox
-- heroku addons:open mongolab
-- heroku config:get MONGODB_URI
-- REMOVE ALL API KEYS (e.g. facebook secret) FROM YOUR CODE!!!!
-- npm install --save dotenv
-- require('dotenv').config();
-- example .env file (adds fake environment variables to `process.env`)
-```javascript
-  MONGODB_URI=mongodb://localhost/databaseName
+- create heroku account
+  - it's a cloud platform for hosting apps
+  - https://signup.heroku.com/
+
+- install [heroku CLI](https://devcenter.heroku.com/articles/heroku-cli)
+  - download here: https://devcenter.heroku.com/articles/heroku-cli
+
+- prepare app
+  - `$ heroku login`
+  - `$ heroku git:remote -a projectName`
+  - make sure package.json contains a start script
+  - add [engines](https://devcenter.heroku.com/articles/nodejs-support#specifying-a-node-js-version) to package.json
+
 ```
-- .gitignore .env
-- example app.js
-```javascript
-  require("dotenv").config();
-  mongoose.connect(process.env.MONGODB_URI);
+"scripts": {
+  "start": "node ./bin/www"
+},
+"engines": {
+  "node": "x.x.x",
+  "npm": "x.x.x"
+}
 ```
+
+- create database via shell
+  - `$ heroku addons:create mongolab:sandbox`
+  - `$ heroku addons:open mongolab`
+  - `$ heroku config:get MONGODB_URI`
+- OR create detabase in [MLAB](https://mlab.com/)
+  - ...
+  
+- configure app
+  - REMOVE ALL API KEYS (e.g. facebook secret) FROM YOUR CODE!!!!
+  - `$ npm install --save dotenv`
+  - add `require('dotenv').config();` to app.js
+  - create `.env` file (adds fake environment variables to `process.env`)
+  ```javascript
+    MONGODB_URI=mongodb://localhost/databaseName
+  ```
+  - add `.env` to `.gitignore`
+  - replace hardcoded mongodb URI with process env variable in app.js
+  ```javascript
+    mongoose.connect(process.env.MONGODB_URI, ...);
+  ```
+
+- deploy
+  - `$ git push heroku master`
+  - `$ heroku logs`
