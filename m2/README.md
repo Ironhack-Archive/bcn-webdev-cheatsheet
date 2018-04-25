@@ -167,6 +167,7 @@
 - prepare app
   - `$ heroku login`
   - `$ heroku git:remote -a projectName`
+  - make sure package.json is in the root of the project
   - make sure package.json contains a start script
   - add [engines](https://devcenter.heroku.com/articles/nodejs-support#specifying-a-node-js-version) to package.json
 
