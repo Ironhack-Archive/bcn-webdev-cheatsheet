@@ -164,9 +164,9 @@
   - download here: https://devcenter.heroku.com/articles/heroku-cli
 
 - prepare app
-  - `$ heroku login`
-  - `$ heroku git:remote -a projectName`
-  - make sure package.json contains a start script
+  - `$ heroku login`
+  - `$ heroku git:remote -a projectName`
+  - make sure package.json contains a start script
   - add [engines](https://devcenter.heroku.com/articles/nodejs-support#specifying-a-node-js-version) to package.json
 
 ```
@@ -180,9 +180,10 @@
 ```
 
 - create database via shell
-  - `$ heroku addons:create mongolab:sandbox`
-  - `$ heroku addons:open mongolab`
-  - `$ heroku config:get MONGODB_URI`
+  - `$ heroku addons:create mongolab:sandbox`
+  - `$ heroku addons:open mongolab`
+  - `$ heroku config:get MONGODB_URI`
+
 - OR create detabase in [MLAB](https://mlab.com/)
   - ...
   
@@ -191,14 +192,19 @@
   - `$ npm install --save dotenv`
   - add `require('dotenv').config();` to app.js
   - create `.env` file (adds fake environment variables to `process.env`)
-  ```javascript
-    MONGODB_URI=mongodb://localhost/databaseName
-  ```
-  - add `.env` to `.gitignore`
-  - replace hardcoded mongodb URI with process env variable in app.js
-  ```javascript
-    mongoose.connect(process.env.MONGODB_URI, ...);
-  ```
+  - add `.env` to `.gitignore`
+  - replace hardcoded mongodb URI with process env variable in app.js
+
+```
+# in .env file
+MONGODB_URI=mongodb://localhost/databaseName
+```
+
+
+```javascript
+// in app.js
+mongoose.connect(process.env.MONGODB_URI, ...);
+```
 
 - deploy
   - `$ git push heroku master`
