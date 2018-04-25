@@ -155,7 +155,7 @@
 - types: String, Number, Date, Boolean, Array, Mixed, Objectid
 
 # heroku
-- http://learn.ironhack.com/#/learning_unit/2233
+- http://learn.ironhack.com/#/learning_unit/3170
 - create heroku account
   - it's a cloud platform for hosting apps
   - https://signup.heroku.com/
