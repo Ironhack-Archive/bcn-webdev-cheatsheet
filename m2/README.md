@@ -164,9 +164,9 @@
 - install [heroku CLI](https://devcenter.heroku.com/articles/heroku-cli)
   - download here: https://devcenter.heroku.com/articles/heroku-cli
 
-- prepare app
+- prepare app inside the project
   - `$ heroku login`
-  - `$ heroku git:remote -a projectName`
+  - `$ heroku git:remote -a app-name`
   - make sure package.json is in the root of the project
   - make sure package.json contains a start script
   - add [engines](https://devcenter.heroku.com/articles/nodejs-support#specifying-a-node-js-version) to package.json
@@ -211,6 +211,7 @@ mongodb://myuser:mypassword@ds255309.mlab.com:11309/ironhack-database
 ```
 # in .env file
 MONGODB_URI=mongodb://localhost/databaseName
+FACEBOOK_API_KEY=qwerqweoiov32414oih12p3ou12po12po3ihp1234
 ```
 
 
@@ -222,3 +223,4 @@ mongoose.connect(process.env.MONGODB_URI, ...);
 - deploy
   - `$ git push heroku master`
   - `$ heroku logs`
+  - `$ heroku logs -t`
