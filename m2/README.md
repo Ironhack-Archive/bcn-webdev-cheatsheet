@@ -194,8 +194,9 @@
     - provide a name
     - submit
     - wait until the database is created
-    - add "admin" user database
-
+    - add "admin" user database
+  - copy mongodb url to herokuapp settings config variables `MONGODB_URI`
+  
 ```
 mongodb://myuser:mypassword@ds255309.mlab.com:11309/ironhack-database
 ```
@@ -219,5 +220,5 @@ mongoose.connect(process.env.MONGODB_URI, ...);
 ```
 
 - deploy
-  - `$ git push heroku master`
-  - `$ heroku logs`
+  - `$ git push heroku master`
+  - `$ heroku logs`
