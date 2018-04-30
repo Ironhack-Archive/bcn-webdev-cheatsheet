@@ -5,7 +5,7 @@ import 'rxjs/add/operator/toPromise';
 // import { environment } from '../../environments/environment';
 
 @Injectable()
-export class MyService {
+export class RestasurantService {
 
   private baseUrl = 'http://localhost:3000';
 
