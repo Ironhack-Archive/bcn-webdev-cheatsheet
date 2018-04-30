@@ -1,0 +1,17 @@
+<div class="section loading" *ngIf="!restaurants">
+  is loading...
+</div>
+
+<section class="section" *ngIf="restaurants">
+  <h1>All Restaurants</h1>
+  <p><a [routerLink]="['/restaurants/create']">create a restaurant</a></p>
+  <hr>
+  <div class="restaurants">
+    <div class="restaurant card has-link" *ngFor="let restaurant of restaurants">
+      <a [routerLink]="['/restaurants', restaurant._id]">
+        <h3 class="title">{{restaurant.title}}</h3>
+      ...
+      </a>
+    </div>
+  </div>
+</section>
