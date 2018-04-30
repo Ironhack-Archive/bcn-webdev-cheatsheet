@@ -1,0 +1,18 @@
+...
+
+  <div class="actions">
+    <a class="btn" [routerLink]="['/restaurants/create']">create a restaurant</a>
+  </div>
+
+...
+
+  <div class="restaurants">
+    <div class="restaurant card has-link" *ngFor="let restaurant of restaurants">
+      <a [routerLink]="['/restaurants', restaurant._id]">
+        <h3 class="title">{{restaurant.title}}</h3>
+        ...
+      </a>
+    </div>
+  </div>
+
+...
