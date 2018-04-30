@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { MoviesService } from '../../services/restaurants.service';
+import { RestaurantService } from '../../services/restaurants.service';
 
 @Component({
   selector: 'app-restaurant-create',
