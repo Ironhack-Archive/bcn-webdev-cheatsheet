@@ -120,7 +120,7 @@
 - ngFor
   - `*ngFor="let item of array"`
   - `*ngFor="let item of array, let ix = index"`
-  - `*ngFor="let item of array, trackBy: trackFn"`
+  - `*ngFor="let item of array, trackBy: trackFn"` (advanced)
 - ngSwitch
   - `[ngSwitch]="expression">`
   - `*ngSwitchCase="expression"`
