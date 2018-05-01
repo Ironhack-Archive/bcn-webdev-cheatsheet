@@ -53,12 +53,12 @@
 
 
 # angular CLI
-- ng new name-of-app
-- ng serve
-- ng g c components/...
-- ng g c pages/...
-- ng g s services/...
-- ng g class models/...
+- `$ ng new name-of-app`
+- `$ ng serve`
+- `$ ng g c components/name-of-component`
+- `$ ng g c pages/name-of-page`
+- `$ ng g s services/name-of-service`
+- `$ ng g class models/name-of-model`
 
 # app structure
 - `index.html`
