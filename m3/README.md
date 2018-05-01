@@ -58,6 +58,7 @@
 - `$ ng g c components/name-of-component`
 - `$ ng g c pages/name-of-page`
 - `$ ng g s services/name-of-service`
+- `$ ng g p pipes/name-of-pipe`
 - `$ ng g class models/name-of-model`
 
 # app structure
@@ -175,6 +176,14 @@
   - `handleSearchChange(event) { .... }`
 
 # pipes
+- [DOCS](https://angular.io/api/core/Pipe)
+- [LU](http://learn.ironhack.com/#/learning_unit/3210)
+- [DatePipe](https://angular.io/api/common/DatePipe)
+- debug: {{users | json}} :-)
+- date: {{user.birthday | date:'short'}}
+- price: {{product.price | currency:'EUR':'symbol':'1.2-2'}}
+- using variable as pipe arguments:
+  - price: {{product.price | currency:user.settings.currency:'symbol':'1.2-2'}}
 
 # services (injectables)
 - generate with `ng g s services/name`
