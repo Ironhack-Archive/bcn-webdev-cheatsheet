@@ -83,7 +83,7 @@
 # binding
 - interpolation `{{ expression }}`
 - property binding `<button [disabled]="processing">`
-- event binding `<button (click)="handleClick($event)">`
+- event binding `<button (click)="handleClick($event, index, true)">`
 - two way binding
   - add `import { FormsModule } from '@angular/forms';` to `app.module.ts`
   - add `imports: [ ... FormsModule, ... ]` to `app.module.ts`
