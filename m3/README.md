@@ -202,7 +202,7 @@
 - in components, to navigate
   - `import { Router } from '@angular/router';`
   - `constructor(... private router: Router ... )`
-  - `this.router.navigate(['/restaurants']`
+  - `this.router.navigate(['/restaurants']);`
 
 
 # services (injectables)
