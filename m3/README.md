@@ -185,6 +185,26 @@
 - using variable as pipe arguments:
   - price: {{product.price | currency:user.settings.currency:'symbol':'1.2-2'}}
 
+# routing
+
+- in `app.module.ts`
+  - `import { RouterModule, Routes } from '@angular/router';`
+  - `const routes: Routes = [ ...,  { path: 'movies/:id', component: MovieDetailComponent }, ... ]`
+  - `imports: [ ..., RouterModule.forRoot(routes), ...],`
+- in `app.component.html`
+  - `... <router-outlet></router-outlet> ...`
+- in component templates
+  - `<a [routerLink]="['/restaurants', restaurant._id]">`
+- in components, to read `:id` param
+  - `import { ActivatedRoute } from '@angular/router';`
+  - `constructor(... private route: ActivatedRoute ... )`
+  - `this.route.params.subscribe((params) => { ... params.id ... }`
+- in components, to navigate
+  - `import { Router } from '@angular/router';`
+  - `constructor(... private router: Router ... )`
+  - `this.router.navigate(['/restaurants']`
+
+
 # services (injectables)
 - generate with `ng g s services/name`
 
