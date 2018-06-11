@@ -58,6 +58,7 @@
   - declaration: property, value
   - specifity
   - pseudo-selector
+- https://cssreference.io/
 - and more:
   - user agent styles
   - reset
