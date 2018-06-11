@@ -43,6 +43,7 @@
 - dom node
 - root, ancestor, descendent, parent, child, sibling
 - element type
+- http://htmlcheatsheet.com/
 - attribute
 - block vs inline
 - manipulation
