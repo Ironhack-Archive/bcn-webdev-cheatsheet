@@ -33,6 +33,8 @@
 - context
 - prototype
 - object oriented programming
+- instance
+- constructor
 - encapsulation
 - inheritance
 - composition
