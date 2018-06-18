@@ -40,10 +40,3 @@ Truck.prototype.addLoad = function (kilos) {
   }
   this.currentLoad += kilos;
 };
-
-ƒ (kilos) {
-  if (this.currentLoad + kilos > this.capacity) {
-    throw new Error('Excess load!!');
-  }
-  this.currentLoad += kilos;
-}
