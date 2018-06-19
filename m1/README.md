@@ -49,7 +49,7 @@
 - attribute
 - block vs inline
 - manipulation
-- events
+- [events](https://developer.mozilla.org/en-US/docs/Web/Events)
 - binding/unbinding event listeners
 
 ## concepts css
@@ -188,7 +188,7 @@
 - document.getElementsByClassName('feature')
 - document.querySelector('.features .feature')
 - document.querySelectorAll('.features .feature')
-- node.setAttribute('disabled', 'disabled')
+- node.setAttribute('src', 'https://fakeimage.com/image.jpg')
 - node.classList.add()
 - node.appendChild(child)
 - node.children[0]...
