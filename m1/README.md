@@ -189,7 +189,7 @@
 - document.querySelector('.features .feature')
 - document.querySelectorAll('.features .feature')
 - node.setAttribute('src', 'https://fakeimage.com/image.jpg')
-- node.classList.add()
+- node.classList.add('active') node.classList.remove('active') node.classList.toggle('active')
 - node.appendChild(child)
 - node.children[0]...
 - node.remove()
