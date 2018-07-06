@@ -92,7 +92,7 @@
 # express generator
 - [docs](https://expressjs.com/en/starter/generator.html)
 - npm install -g express-generator
-- express my-project --view=ejs --git
+- express my-project --view=hbs --git
 - add start-dev to package.json scripts
 - add launcher.json
 - add .eslintrc.json (eslint --init)
