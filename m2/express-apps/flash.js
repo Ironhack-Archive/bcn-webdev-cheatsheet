@@ -19,7 +19,7 @@ app.post('/form', (req, res, next) => {
 
 app.get('/form', (req, res, next) => { 
   const data = {
-    messages: req.flash('message-name');
+    messages: req.flash('message-name')
   };
   res.render('template-name', data);
 });
