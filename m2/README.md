@@ -1,5 +1,7 @@
 
 # concepts
+
+## backend development
 - module 2 project = backend rendered app (old school)
 - http request/response cycle
 - http headers & body
@@ -9,7 +11,7 @@
 - node modules & packages
 - express & mongoose frameworks
 
-# es6
+## es6
 - arrow functions have no context
 - arrow functions usually as callbacks
 - single line arrow functions (no brackets, implicit return)
@@ -23,7 +25,7 @@
 - object shortcuts (implicit value)
 - template (and multiline) strings
 
-# nodejs
+## nodejs
 - **IT'S NOT A FRAMEWORK!**
 - runtime environment for running javascript in the backend (v8 engine)
 - app can be an http server (runs "forever")
@@ -32,7 +34,7 @@
 - node callbacks convection (err, result) => { ... }
 - has some built-in modules like `fs`, `process`, `path` and `http`+
 
-# node modules
+## node modules
 - every js file is a module
 - every file has it's own scope (no global scope)
 - npm packages are also modules
@@ -52,7 +54,7 @@
 - package.json (every node project needs one)
 - always add "node_modules" to .gitignore
 
-# package.json
+## package.json
 - "scripts" are shortcuts
 - "dependencies" are the packages the project needs to be executed
 - "devDependencies" are the packages the developers need to work on the project
@@ -64,7 +66,7 @@
 }
 ```
 
-# http
+## http
 - request, response
 - request = headers + body (optional)
 - response = headers + body (optional)
@@ -81,7 +83,7 @@
   - 5xx - server error (e.g.: 500 internal error, 504 timeout)
 
 
-# nodemon
+## nodemon
 - npm install -g nodemon
 - nodemon --inspect app.js
 - in package.json scripts
@@ -89,7 +91,7 @@
   - "start-dev": "nodemon --inspect app.js"
 
 
-# express generator
+## express generator
 - [docs](https://expressjs.com/en/starter/generator.html)
 - npm install -g express-generator
 - express my-project --view=hbs --git
@@ -100,12 +102,12 @@
 - add .gitignore with node_modules
 - add our [error handling snippets](./express-apps/app.js) to app.js 
 
-# express
+## express
 - http server framework
 - pipeline of middlewares, followed by routes
 - see snippets
 
-# auth
+## auth
 - use expression session (see snippet)
 - 2x routes for login (get & post)
 - 2x routes for signup (get & post)
@@ -115,7 +117,7 @@
 - logout: req.session.currentUser = null
 - user in views: req.locals.user = req.session.currentUser
 
-# passport
+## passport
 - config (see snippet)
   - serialize
   - deserialize
@@ -127,12 +129,12 @@
 - if (!req.user) { ... }
 - if (!req.isAuthenticated()) { ... }
 
-# mongodb
+## mongodb
 - document database (as opposedd to relational database)
 - stores data as documents, schema free, but relationships still exist
 - install mongodb, make sure it is running
 
-# mongo shell
+## mongo shell
 - $ mongo
 - show dbs
 - use databaseName
@@ -144,17 +146,37 @@
 - db.animals.insert({})
 - [read operations](https://docs.mongodb.com/manual/crud/#read-operations)
 
-# mongo import
+## mongo import
 - mongoimport  --db databaseName  --collection collectionName --file fileName
 
-# mongoose
+## mongoose
 - npm install --save mongoose
 - object document mapper
 - bring schemas into our use of mongodb
 - see example schemas in `./snippets`
 - types: String, Number, Date, Boolean, Array, Mixed, Objectid
 
-# heroku
+# best practices
+
+## node
+
+
+
+## express
+
+- app.js middlewares before routes!
+- separate your routes by prefix (e.g. '/auth', '/beers', ...)
+- POST routes
+  - check for authorization (e.g. `if (req.session.currentUser) ... ` 
+  - always validate the POST body (e.g. `if (!req.body.username) ....`
+  - always `res.redirect()` never `res.render()`
+- GET routes
+  - check for authorization (e.g. `if (req.session.currentUser) ... ` 
+  - when loading items by id, check if DB returns a doc, and if it doesn't `return next()` to send to 404 middleware
+  - use a `const data` object to send to `res.render('template', data)`
+- always `.catch(next)` 
+
+# deployment
 - http://learn.ironhack.com/#/learning_unit/3170
 - create heroku account
   - it's a cloud platform for hosting apps
