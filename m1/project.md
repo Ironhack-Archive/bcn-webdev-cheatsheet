@@ -8,7 +8,7 @@
 - restart
 
 ## Planning
-- github repo readme with:
+- [github repo readme](https://github.com/zapatran/template-project-game/blob/master/Project%20Template.md) with:
   - states
   - views
   - data structures
