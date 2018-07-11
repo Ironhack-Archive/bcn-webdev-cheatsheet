@@ -7,13 +7,20 @@
 - game.js
 - restart
 
-## Planing
+## Planning
+- github repo readme with:
+  - states
+  - views
+  - data structures
+  - backlog
 
-- states
-- views
-- data structures
-- backlog
-
+## Deploy
+ - go to repository settings
+ - look for Github Pages
+ - choose master branch
+ - click on save
+ - url will be on top of the Github Pages section
+ 
 ## Extra Features
 
 
