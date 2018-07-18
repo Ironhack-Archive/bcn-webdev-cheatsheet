@@ -243,6 +243,7 @@ mongoose.connect(process.env.MONGODB_URI, ...);
 ```
 
 - deploy
+  - `$ git add` && `$ git commit`
   - `$ git push heroku master`
   - `$ heroku logs`
   - `$ heroku logs -t`
