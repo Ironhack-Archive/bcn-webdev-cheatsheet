@@ -1,6 +1,6 @@
 // npm install bcrypt
 
-const bcrypt     = require("bcrypt");
+const bcrypt     = require('bcrypt');
 const saltRounds = 10;
 
 // Signup user
