@@ -55,11 +55,14 @@
 # angular CLI
 - `$ ng new name-of-app`
 - `$ ng serve`
+- `$ ng serve --aot`
 - `$ ng g c components/name-of-component`
 - `$ ng g c pages/name-of-page`
 - `$ ng g s services/name-of-service`
 - `$ ng g p pipes/name-of-pipe`
 - `$ ng g class models/name-of-model`
+- `$ ng build`
+
 
 # app structure
 - `index.html`
