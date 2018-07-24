@@ -4,7 +4,7 @@
 
 const flash = require('connect-flash');
 
-// --
+// after the session middleware add the flash middleware
 
 app.use(flash());
 
