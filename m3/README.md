@@ -114,7 +114,8 @@
   - pristine
   - touched
   - untouched
-  - errors (e.g. `usernameField.errors.minlength`)
+  - errors (e.g. `usernameField.errors.minlength`)
+  - submitted (only in forms)
 
 # directives
 - [DOCS](https://angular.io/guide/template-syntax)
