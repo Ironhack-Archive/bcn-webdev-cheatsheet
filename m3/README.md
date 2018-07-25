@@ -209,7 +209,7 @@
   - `this.router.navigate(['/restaurants']);`
 - 404 page
   - in `app.module.ts`
-    - {path: '**', component: NotFoundComponent}
+    - `{path: '**', component: NotFoundPageComponent}`
     
 # services (injectables)
 - generate with `ng g s services/name`
