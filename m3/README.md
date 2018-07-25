@@ -193,7 +193,7 @@
 
 - in `app.module.ts`
   - `import { RouterModule, Routes } from '@angular/router';`
-  - `const routes: Routes = [ ...,  { path: 'movies/:id', component: MovieDetailComponent }, ... ]`
+  - `const routes: Routes = [ ...,  { path: 'movies/:id', component: MovieDetailPageComponent }, ... ]`
   - `imports: [ ..., RouterModule.forRoot(routes), ...],`
 - in `app.component.html`
   - `... <router-outlet></router-outlet> ...`
