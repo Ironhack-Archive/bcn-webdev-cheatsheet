@@ -207,8 +207,10 @@
   - `import { Router } from '@angular/router';`
   - `constructor(... private router: Router ... )`
   - `this.router.navigate(['/restaurants']);`
-
-
+- 404 page
+  - in `app.module.ts`
+    - {path: '**', component: NotFoundComponent}
+    
 # services (injectables)
 - generate with `ng g s services/name`
 
