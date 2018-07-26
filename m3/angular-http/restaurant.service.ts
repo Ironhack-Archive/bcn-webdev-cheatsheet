@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpResponse } from '@angular/common/http';
-import 'rxjs/add/operator/toPromise';
+// import 'rxjs/add/operator/toPromise'; <--- This line is no more necessary as toPromise is no more an operator. It's a method on the Observable class which means we don't have to import it anymore.
 
 // import { environment } from '../../environments/environment';
 
