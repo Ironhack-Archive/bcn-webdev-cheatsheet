@@ -143,13 +143,14 @@
 
 # component hierarchy
 - components can be nested
+- create components to reuse (DRY principle) and simplify (single responsability principle)
 - top level components we call "page" components (convention)
 - generate "page" components with `ng g c pages/login-page`
 - generate "other" components with `ng g c components/auth-login-form`
 - always route to a "page" component
 - concetrate responsibilities in "page" components (e.g.: talk to services that connect to the API)
 - keep the "other" components simple
-- component inp
+- component input
   - `[input]="data"`
   - send data from parent components to child components
 - component outputs
