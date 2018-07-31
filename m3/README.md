@@ -128,7 +128,7 @@
   - `*ngFor="let item of array, trackBy: trackFn"` (advanced)
 - ngSwitch
   - `[ngSwitch]="expression">`
-  - `*ngSwitchCase="expression"`
+  - `*ngSwitchCase="expression"` (if you want a string, make sure to wrap it with strings e.g: `*ngSwitchCase="'not-found'"`)
   - `*ngSwitchDefault`
 - ngClass
   - use with key value pairs
