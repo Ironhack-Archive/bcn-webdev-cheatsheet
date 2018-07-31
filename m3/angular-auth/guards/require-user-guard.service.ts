@@ -12,7 +12,7 @@ export class RequireUserGuardService implements CanActivate {
     private router: Router
   ) { }
 
-  canActivate(): Promise<boolean> {
+  canActivate(): Promise<any> {
     return this.authService.me()
       .then((user) => {
         if (user) {
