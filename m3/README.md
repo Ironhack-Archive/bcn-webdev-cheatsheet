@@ -215,14 +215,21 @@
 # services (injectables)
 - generate with `ng g s services/name`
 
-# Guards
-  - Generate with `ng g service guard/require-user-guard`, etc.
-  - Should only have one function `canActivate()`
-  - Returns true to allow and false to forbid the user from accessing a certain route
+# guards
+  - [DOCS](https://angular.io/guide/router#milestone-5-route-guards)
+  - [LU](http://learn.ironhack.com/#/learning_unit/3231)
+  - generate with `ng g g guards/require-user-guard`, etc.
+  - should only have one function `canActivate()`
+  - returns true to allow and false to forbid the user from accessing a certain route
   - in `app.module.ts`
-    - Needs to be used on app.module.ts in the routes configuration: `
-  { path: '',  component: HomePageComponent, canActivate: [ InitAuthGuardService ] },`
-    - Needs to be added to the providers list of app.module.ts 
+    - need to be used on app.module.ts in the routes configuration: 
+    ```
+    { path: '',  component: HomePageComponent, canActivate: [ InitAuthGuardService ] },
+    { path: 'login',  component: AuthLoginPageComponent, canActivate: [ RequireAnonGuardService ] },
+    { path: 'signup',  component: AuthSignupPageComponent, canActivate: [ RequireAnonGuardService ] },
+    { path: 'page',  component: ... , canActivate: [ RequireUserGuardService ] },
+    ```
+    - needs to be added to the providers list of app.module.ts 
     ` 
     providers: [...
     AuthService,
@@ -232,7 +239,7 @@
     ...
   ],
   `
-  - For auth you will need 3 guards: `require-user` where a user is required to access a route, `require-anon` where a logged in should not be provided and a `init-auth` that you will call in every route that does not need anon or user access
+  - For auth you will need 3 [guards](./angular-auth/guards): `require-user` where a user is required to access a route, `require-anon` where a logged in should not be provided and a `init-auth` that you will call in every route that does not need anon or user access
 
 # http
 
