@@ -11,10 +11,10 @@ import { InitAuthGuardService } from './guards/init-auth-guard.service';
 // -- routes
 
 const routes: Routes = [
-  { path: '',  component: HomePageComponent, canActivate: [ InitAuthGuardService ] },
-  { path: 'login',  component: AuthLoginPageComponent, canActivate: [ RequireAnonGuardService ] },
-  { path: 'signup',  component: AuthSignupPageComponent, canActivate: [ RequireAnonGuardService ] },
-  { path: 'page',  component: ... , canActivate: [ RequireUserGuardService ] },
+  { path: '',  component: HomePageComponent, canActivate: [ InitAuthGuard ] },
+  { path: 'login',  component: AuthLoginPageComponent, canActivate: [ RequireAnonGuard ] },
+  { path: 'signup',  component: AuthSignupPageComponent, canActivate: [ RequireAnonGuard ] },
+  { path: 'page',  component: ... , canActivate: [ RequireUserGuard ] },
   { path: '**', redirectTo: '' }
 ];
 
