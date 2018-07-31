@@ -1,26 +1,17 @@
 import { Injectable } from '@angular/core';
 import { CanActivate } from '@angular/router';
-import { Router } from '@angular/router';
 
 import { AuthService } from '../services/auth.service';
 
 @Injectable()
-export class RequireUserGuardService implements CanActivate {
+export class InitAuthGuard implements CanActivate {
 
-  constructor(
-    private authService: AuthService,
-    private router: Router
-  ) { }
+  constructor(private authService: AuthService) { }
 
   canActivate(): Promise<any> {
     return this.authService.me()
       .then((user) => {
-        if (user) {
-          return true;
-        } else {
-          this.router.navigate(['/login']);
-          return false;
-        }
+        return true;
       })
       .catch((error) => {
         console.error(error);
