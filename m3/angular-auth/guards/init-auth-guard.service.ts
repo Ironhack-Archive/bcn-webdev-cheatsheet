@@ -8,7 +8,7 @@ export class InitAuthGuardService implements CanActivate {
 
   constructor(private authService: AuthService) { }
 
-  canActivate(): Promise<boolean> {
+  canActivate(): Promise<any> {
     return this.authService.me()
       .then((user) => {
         return true;
