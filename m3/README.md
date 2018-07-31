@@ -215,6 +215,12 @@
 # services (injectables)
 - generate with `ng g s services/name`
 
+# Guards
+  - Generate with `ng g service guard/require-user-guard`, etc.
+  - Should only have one function `canActivate()`
+  - Returns true to allow and false to forbid the user from accessing a certain route
+  - For auth you will need 3 guards: `require-user` where a user is required to access a route, `require-anon` where a logged in should not be provided and a `init-auth` that you will call in every route that does not need anon or user access
+
 # http
 
 # REST API
