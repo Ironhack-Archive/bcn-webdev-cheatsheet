@@ -224,18 +224,18 @@
   - in `app.module.ts`
     - need to be used on app.module.ts in the routes configuration: 
     ```
-    { path: '',  component: HomePageComponent, canActivate: [ InitAuthGuardService ] },
-    { path: 'login',  component: AuthLoginPageComponent, canActivate: [ RequireAnonGuardService ] },
-    { path: 'signup',  component: AuthSignupPageComponent, canActivate: [ RequireAnonGuardService ] },
-    { path: 'page',  component: ... , canActivate: [ RequireUserGuardService ] },
+    { path: '',  component: HomePageComponent, canActivate: [ InitAuthGuard ] },
+    { path: 'login',  component: AuthLoginPageComponent, canActivate: [ RequireAnonGuard ] },
+    { path: 'signup',  component: AuthSignupPageComponent, canActivate: [ RequireAnonGuard ] },
+    { path: 'page',  component: ... , canActivate: [ RequireUserGuard ] },
     ```
     - needs to be added to the providers list of app.module.ts 
     ` 
     providers: [...
     AuthService,
-    InitAuthGuardService,
-    RequireAnonGuardService,
-    RequireUserGuardService,
+    InitAuthGuard,
+    RequireAnonGuard,
+    RequireUserGuard,
     ...
   ],
   `
