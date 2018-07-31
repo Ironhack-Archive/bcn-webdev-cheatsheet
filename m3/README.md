@@ -218,8 +218,20 @@
 # Guards
   - Generate with `ng g service guard/require-user-guard`, etc.
   - Should only have one function `canActivate()`
-  - Needs to be used on app.module.ts in the routes configuration
   - Returns true to allow and false to forbid the user from accessing a certain route
+  - in `app.module.ts`
+    - Needs to be used on app.module.ts in the routes configuration: `
+  { path: '',  component: HomePageComponent, canActivate: [ InitAuthGuardService ] },`
+    - Needs to be added to the providers list of app.module.ts 
+    ` 
+    providers: [...
+    AuthService,
+    InitAuthGuardService,
+    RequireAnonGuardService,
+    RequireUserGuardService,
+    ...
+  ],
+  `
   - For auth you will need 3 guards: `require-user` where a user is required to access a route, `require-anon` where a logged in should not be provided and a `init-auth` that you will call in every route that does not need anon or user access
 
 # http
