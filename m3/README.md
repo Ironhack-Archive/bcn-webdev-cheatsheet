@@ -218,7 +218,7 @@
 # guards
   - [DOCS](https://angular.io/guide/router#milestone-5-route-guards)
   - [LU](http://learn.ironhack.com/#/learning_unit/3231)
-  - generate with `ng g g guards/require-user-guard`, etc.
+  - generate with `ng g g guards/require-user`, etc.
   - should only have one function `canActivate()`
   - returns true to allow and false to forbid the user from accessing a certain route
   - in `app.module.ts`
@@ -239,7 +239,10 @@
     ...
   ],
   `
-  - For auth you will need 3 [guards](./angular-auth/guards): `require-user` where a user is required to access a route, `require-anon` where a logged in should not be provided and a `init-auth` that you will call in every route that does not need anon or user access
+  - For auth you will need 3 [guards](./angular-auth/guards): 
+    - `require-user` where a logged in user is required to access a route
+    -`require-anon` where an anonymous user is required
+    -`init-auth` where it's irrelevant whether the user is logged in or not (but we still want to initialize the auth service)
 
 # http
 
