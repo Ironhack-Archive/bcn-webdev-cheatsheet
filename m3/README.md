@@ -245,5 +245,17 @@
     -`init-auth` where it's irrelevant whether the user is logged in or not (but we still want to initialize the auth service)
 
 # http
+  - [DOCS](https://angular.io/guide/http)
+  - [LU](http://learn.ironhack.com/#/learning_unit/3222)
+  - in `app.module.ts`
+    - `import { HttpClientModule } from '@angular/common/http';`
+    - `imports: [ ..., HttpClientModule, ...],`
+  - in `**.service.ts`
+    - `import { HttpClient } from '@angular/common/http';`
+    - `constructor(private httpClient: HttpClient) { }`
+  - in a method (e.g. getOne) of `**.service.ts`
+    - `return this.httpClient.[method](${this.API_URL}/me, options)`
+    - where method needs to be `get`, `post`, `put`, etc...
+    - it returns a promise so `.then` and `.catch` are needed
 
 # REST API
