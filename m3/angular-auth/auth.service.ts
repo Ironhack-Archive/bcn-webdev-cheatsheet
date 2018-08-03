@@ -1,8 +1,13 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpResponse } from '@angular/common/http';
+
+// if angular-cli < 6.0.0
 import { Observable } from 'rxjs/Observable';
 import { Subject } from 'rxjs/Subject';
 import 'rxjs/add/operator/toPromise';
+
+// if angular-cli > 6.0.0
+import { Subject, Observable } from 'rxjs';
 
 // import { environment } from '../../environments/environment';
 
