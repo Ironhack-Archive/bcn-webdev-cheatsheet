@@ -1,29 +1,44 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpResponse } from '@angular/common/http';
-// import 'rxjs/add/operator/toPromise'; <--- This line is no more necessary as toPromise is no more an operator. It's a method on the Observable class which means we don't have to import it anymore.
 
 // import { environment } from '../../environments/environment';
 
 @Injectable()
 export class RestasurantService {
 
-  private baseUrl = 'http://localhost:3000';
+  private baseUrl = 'http://localhost:3000/restaurants';
 
   constructor(private httpClient: HttpClient) { }
+
+  // options.withCredentials is always required
+  // without it, the HttpClient service does not send cookies in a CORS context
+  // cookies are required to keep a session in the Rest API
 
   getList(): Promise<any> {
     const options = {
       withCredentials: true
     };
-    return this.httpClient.get(`${this.baseUrl}/restaurants`, options)
+    return this.httpClient.get(`${this.baseUrl}`, options)
       .toPromise();
   }
+
+  // get() takes 2 arguments: url, options
 
   getOneById(id: string): Promise<any> {
     const options = {
       withCredentials: true
     };
-    return this.httpClient.get(`${this.baseUrl}/restaurants/${id}`, options)
+    return this.httpClient.get(`${this.baseUrl}/${id}`, options)
+      .toPromise();
+  }
+
+  // post() and put() take 3 arguments: url, data, options
+
+  create(data): Promise<any> {
+    const options = {
+      withCredentials: true
+    };
+    return this.httpClient.get(`${this.baseUrl}`, data, options)
       .toPromise();
   }
 
@@ -32,9 +47,10 @@ export class RestasurantService {
 
   getFoobar(): Promise<any> {
     const options = {
+      withCredentials: true,
       observe: 'response'
     };
-    return this.httpClient.get(`${this.baseUrl}/restaurants`, options)
+    return this.httpClient.get(`${this.baseUrl}/foobar`, options)
       .toPromise()
       .then((res: HttpResponse<Object>) => res.body);
   }
