@@ -212,50 +212,85 @@
   - in `app.module.ts`
     - `{path: '**', component: NotFoundPageComponent}`
     
-# services (injectables)
+# services 
+- [DOCS](https://angular.io/guide/component-interaction)
+- [LU](http://learn.ironhack.com/#/learning_unit/2974)
 - generate with `ng g s services/name`
+- services are simple classes
+- use services to:
+  - keep your code DRY - a place to keep methods that are used by other services/components
+  - store state that can be accessed/modified by other services/components
+  - create observables that other services/components can subscribe too
+- services are injectables
+  ```
+  @Injectable()
+  export class RestaurantService {
+  ```
+  - you can ask Angular to provide an instance of service to the constructor of other services/components
+  ```
+  constructor(... private restaurantService: RestaurantService ...)
+  ```
+- services are singletons
+  - Angular only creates one instance of each service (and only once some service/component requires its injection)
+- services sould be small and follow SRP (single responsibility principle)
+  - if making requests to a simple API, create one service with all the methods
+  - if making requests to a larger API (e.g., your Node.js REST API) create one service per domain (e.g.: `auth`, `restaurants`, etc...)
+
 
 # guards
-  - [DOCS](https://angular.io/guide/router#milestone-5-route-guards)
-  - [LU](http://learn.ironhack.com/#/learning_unit/3231)
-  - generate with `ng g g guards/require-user`, etc.
-  - should only have one function `canActivate()`
-  - returns true to allow and false to forbid the user from accessing a certain route
-  - in `app.module.ts`
-    - need to be used on app.module.ts in the routes configuration: 
-    ```
-    { path: '',  component: HomePageComponent, canActivate: [ InitAuthGuard ] },
-    { path: 'login',  component: AuthLoginPageComponent, canActivate: [ RequireAnonGuard ] },
-    { path: 'signup',  component: AuthSignupPageComponent, canActivate: [ RequireAnonGuard ] },
-    { path: 'page',  component: ... , canActivate: [ RequireUserGuard ] },
-    ```
-    - needs to be added to the providers list of app.module.ts 
-    ` 
-    providers: [...
-    AuthService,
+- [DOCS](https://angular.io/guide/router#milestone-5-route-guards)
+- [LU](http://learn.ironhack.com/#/learning_unit/3231)
+- [CHEAT SHEET](./angular-auth/guards)
+- generate with `ng g g guards/require-user`, etc.
+- guards determine if the user is allowed or forbidden to access a certain route
+- should only have one function `canActivate()`
+  - `canActivate(): boolean` returns `true` (to allow) or `false` (to forbid) 
+  - or `canActivate(): Promise<any>` returns a promise that rejects with `true` (to allow) or `false` (to forbid)
+  - if returning/resolving with false, navigate somewhere else from within the guard
+  ```
+  this.router.navigate(['/']);
+  return false;
+  ```
+- register the guards in each route of `app.module.ts`
+  ```
+  { path: '',  component: HomePageComponent, canActivate: [ InitAuthGuard ] },
+  { path: 'login',  component: AuthLoginPageComponent, canActivate: [ RequireAnonGuard ] },
+  { path: 'signup',  component: AuthSignupPageComponent, canActivate: [ RequireAnonGuard ] },
+  { path: 'page',  component: ... , canActivate: [ RequireUserGuard ] },
+  ```
+  - and add them to the providers list of `app.module.ts`
+  ``` 
+  providers: [...
+    ...,
     InitAuthGuard,
     RequireAnonGuard,
     RequireUserGuard,
     ...
   ],
-  `
-  - For auth you will need 3 [guards](./angular-auth/guards): 
-    - `require-user` where a logged in user is required to access a route
-    -`require-anon` where an anonymous user is required
-    -`init-auth` where it's irrelevant whether the user is logged in or not (but we still want to initialize the auth service)
+  ```
+- for authentication you will need 3 [guards](./angular-auth/guards):
+  - `require-user` where a logged in user is required to access a route
+  - `require-anon` where an anonymous user is required
+  - `init-auth` where it's irrelevant whether the user is logged in or not (but we still want to initialize the auth service)
 
 # http
-  - [DOCS](https://angular.io/guide/http)
-  - [LU](http://learn.ironhack.com/#/learning_unit/3222)
-  - in `app.module.ts`
-    - `import { HttpClientModule } from '@angular/common/http';`
-    - `imports: [ ..., HttpClientModule, ...],`
-  - in `**.service.ts`
-    - `import { HttpClient } from '@angular/common/http';`
-    - `constructor(private httpClient: HttpClient) { }`
-  - in a method (e.g. getOne) of `**.service.ts`
-    - `return this.httpClient.[method](${this.API_URL}/me, options)`
-    - where method needs to be `get`, `post`, `put`, etc...
-    - it returns a promise so `.then` and `.catch` are needed
-
-# REST API
+- [DOCS](https://angular.io/guide/http)
+- [LU](http://learn.ironhack.com/#/learning_unit/3222)
+- [CHEAT SHEET](./angular-http/)
+- in `app.module.ts`
+  - `import { HttpClientModule } from '@angular/common/http';`
+  - `imports: [ ..., HttpClientModule, ...],`
+- in `**.service.ts`
+  - `import { HttpClient } from '@angular/common/http';`
+  - `constructor(... private httpClient: HttpClient ...) { }`
+  - your service methods (e.g.: `getAll()`, `create(data)`) should return the underlying `HttpClient` promises
+    - `return this.httpClient.METHOD...`
+  - the `httpClient.get()` and `httpClient.delete()` methods take 2 arguments
+    - `return this.httpClient.get('http://...', options)`
+  - the `httpClient.put()` and `httpClient.post()` method take 3 arguments
+    - `return this.httpClient.post('http://....', data, options)`
+  - the `options` argument is always needed if making requests authenticated by cookies (e.g.: your Node.js REST API)
+    - `const options = { withCredentials: true };`
+    - without it, the HttpClient service does not send cookies in a CORS context
+    - cookies are required to keep a session in the Rest API
+   
