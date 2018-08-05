@@ -4,7 +4,7 @@ import { HttpClient, HttpResponse } from '@angular/common/http';
 // import { environment } from '../../environments/environment';
 
 @Injectable()
-export class RestasurantService {
+export class RestaurantService {
 
   private baseUrl = 'http://localhost:3000/restaurants';
 
