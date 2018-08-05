@@ -58,7 +58,7 @@ export class AuthService {
     const options = {
       withCredentials: true
     };
-    return this.httpClient.post(`${this.API_URL}/logout`, {}, options)
+    return this.httpClient.post(`${this.API_URL}/logout`, null, options)
       .toPromise()
       .then(() => this.setUser());
   }
