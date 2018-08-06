@@ -18,7 +18,7 @@
   - type safety vs javascript dynamic types
   - can (should) be applied to:
     - constants and variables
-    - function arguments
+    - function parameters
     - function return values
     - class properties
 - interfaces
