@@ -34,7 +34,7 @@ CLIENT_URL=https://foobar.herokuapp.com
 
 - create heroku app "foobar"
 
-## frontend ng build --aot -prod
+## frontend ng build --aot --prod
 
 - fix all the errors
 
