@@ -53,7 +53,7 @@ CLIENT_URL=https://foobar.herokuapp.com
 
 ```
 "heroku-prebuild": "rm -rf node_modules && npm cache clean --force",
-"postinstall": "ng build --aot -prod",
+"postinstall": "ng build --aot --prod",
 "start": "node app.js"
 ```
 
