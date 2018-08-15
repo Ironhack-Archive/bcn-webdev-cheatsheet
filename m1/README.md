@@ -3,9 +3,14 @@
 - Static Website
 - Structure & Content (HTML) + Presentation (CSS) + Behaviour (JS)
 - Programming + Runtime
+- Events + Async
 - Abstraction(s) + State
+- Library & Framework
 
-## concepts js
+
+# javascript
+
+## concepts
 
 - run time environment
 - program
@@ -37,60 +42,6 @@
 - inheritance
 - composition
 
-## concepts html
-
-- dom tree
-- dom node
-- root, ancestor, descendent, parent, child, sibling
-- element type
-- http://htmlcheatsheet.com/
-- attribute
-- block vs inline
-- manipulation
-- [events](https://developer.mozilla.org/en-US/docs/Web/Events)
-- binding/unbinding event listeners
-
-## concepts css
-
-- [syntax](https://ironion.com/blog/2015/06/12/anatomy-of-a-css-rule/)
-  - rule
-  - selector
-  - declaration: property, value
-  - specifity
-  - pseudo-selector
-- https://cssreference.io/
-- and more:
-  - user agent styles
-  - reset
-  - layout
-  - typography
-  - responsive web design
-  - fluid layout
-  - mobile first
-  - box model
-  - transition
-  - animation
-  - flexbox (and css grid...)
-
-## concepts git
-
-- control version
-- status
-- staging
-- commit
-- remote
-- branch
-- merge
-
-## concepts tools
-
-- linting
-- beautifying
-
-# javascript
-
-- var x = 1;
-
 ## types
 
 - number: 1 1.3 Infinity NaN
@@ -99,6 +50,11 @@
 - object
 - function
 - undefined
+
+## declarations
+
+- `var x;`
+- `var y = true;`
 
 ## operators
 
@@ -212,10 +168,7 @@
 - intervalId = setInterval(func, 1000)
 - clearInterval(intervalId)
 
-
-# best practices
-
-## javascript
+## best practices
 
 - start all files with  `'use strict';` [docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode)
 - write small functions
@@ -231,7 +184,45 @@
   - repeat yourself
   
 
-## html/css
+# html/css
+
+## html
+
+- dom tree
+- dom node
+- root, ancestor, descendent, parent, child, sibling
+- element type
+- http://htmlcheatsheet.com/
+- attributes and values
+- block vs inline
+- manipulation
+- [events](https://developer.mozilla.org/en-US/docs/Web/Events)
+- binding/unbinding event listeners
+
+## css
+
+- [syntax](https://ironion.com/blog/2015/06/12/anatomy-of-a-css-rule/)
+  - rule
+  - selector
+  - declaration: property, value
+  - shorthand property
+  - specifity
+  - pseudo-selector
+- https://cssreference.io/
+- and more:
+  - user agent styles
+  - reset
+  - layout
+  - typography
+  - responsive web design
+  - fluid layout
+  - mobile first
+  - box model
+  - transition
+  - animation
+  - flexbox (and css grid...)
+
+## best practices
 
 - include `meta` to stop browser from zooming in `<head>`
 - start your css with a reset of user-agent styles (at least box-model and body margin)
@@ -275,3 +266,21 @@
 - clearing floats
   - `overflow: hidden` on the parent
   - OR `clear: both` on a sibling after the floats
+
+
+# git
+
+- control version
+- status
+- staging
+- commit
+- remote
+- branch
+- merge
+
+
+# tools
+
+- linting
+- beautifying
+
