@@ -29,3 +29,9 @@
 - git status
 - git reset --HARD (caution, dangerous!)
 - git status
+
+
+## gource
+
+- [homepage](http://gource.io/)
+- [installing on osx](http://www.fullybaked.co.uk/articles/getting-gource-running-on-osx)

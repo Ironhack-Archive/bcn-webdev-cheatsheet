@@ -19,10 +19,13 @@
 ### Design
 
 - [Google Fonts](https://fonts.google.com/)
+- [Colorzilla](http://www.colorzilla.com/chrome/)
 - [Colors](https://coolors.co/)
 - [Colors](http://paletton.com/)
 - [SVG Icons](https://www.flaticon.com/)
 - [Icons](https://icomoon.io/)
+- [Font awesome](https://fontawesome.com/) - font icons
+- [Thenounproject](https://thenounproject.com/) - comunity with Catalogs of Symbols.
 - [Photos](https://unsplash.com/)
 - [Photos](https://www.pexels.com/)
 - [Photos](https://pixabay.com/)
@@ -41,13 +44,30 @@
 
 ### Lorem Ipsum
 
-- [Text](https://www.lipsum.com/)
-- [Text](https://baconipsum.com/)
-- [Text](http://www.catipsum.com/)
-- [...and more](http://idsgn.dropmark.com/107)
-- [Images](https://lorempixel.com/)
-- [Images](https://loremflickr.com/)
+- [Lorem Ipsum](https://www.lipsum.com/)
+- [Bacon Ipsum](https://baconipsum.com/)
+- [Cat Ipsum](http://www.catipsum.com/)
+- [Zombie Ipsum](http://www.zombieipsum.com/)
+
+### Lorem Images
+
+- [Lorem Pixel](https://lorempixel.com/)
+- [Lorem Flikr](https://loremflickr.com/)
+- [Placeholder](https://placeholder.com/)
+- [PlaceImg](https://placeimg.com/)
 - [...and more](https://www.crazyegg.com/blog/image-text-placeholders-web-design/)
+
+
+## CSS tools
+- [UIgradients](https://uigradients.com/) - background Linear Gradient Generator. You can generate the css for gradient with a usefull preview
+- [Colorzilla Gradient Generator](http://www.colorzilla.com/gradient-editor/) - background Linear Gradient Generator. You can generate the css for gradient with a usefull preview
+- [Clippy](https://bennettfeely.com/clippy/) - clip-path generator - you can generate the css for clip-path polygon with a usefull preview
+- [The Ultimate CSS Generator](https://webcode.tools/css-generator) - a very complete CSS generator when you can generate code for animations, box-shadows, filters, etc.
+
+
+## JS Libraries
+- [ScrollMagic](http://scrollmagic.io/) - library that tracks user's current scroll position
+- [GSAP](https://greensock.com/gsap) - the GreenSock Animation Platform animates anything JavaScript can touch
 
 
 ### Deploying
