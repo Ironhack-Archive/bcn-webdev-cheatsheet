@@ -1,18 +1,16 @@
 # concepts
 
-## web
-
-- browser
-- frontend/backend
-- static website
-- separation of concerns
-  - structure: html
-  - presentation: css
-  - behaviour: js
+- Static Website
+- Structure & Content (HTML) + Presentation (CSS) + Behaviour (JS)
+- Programming + Runtime
+- Abstraction(s) + State
 
 ## concepts js
 
 - run time environment
+- program
+- abstraction
+- state
 - expression
 - statement
 - assignment
@@ -67,7 +65,7 @@
   - layout
   - typography
   - responsive web design
-  - liquid
+  - fluid layout
   - mobile first
   - box model
   - transition
