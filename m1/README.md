@@ -219,16 +219,19 @@
 
 ## javascript
 
-- start all files `'use strict';` [docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode)
-- small functions
-- conventions
-  - literal strings, use `'single quotes'`
+- start all files with  `'use strict';` [docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode)
+- write small functions
+- tidy code, idented and consistent
+- DO
+  - for literal strings, use `'single quotes'`
   - one statement per line (don't do `if (foo) { something() } ` all in one line)
-  - variables and function parameters use `camelCase`
-  - functions, start with a verb, use `verbCamelCase`
-  - for constructors use `PascalCase`
+  - variables and function parameters use `camelCase` (e.g.: `var topScores`)
+  - functions, start with a verb, use `verbCamelCase` (e.g.: `function setPosition (x,y) {}`)
+  - for constructors use `PascalCase` (e.g.: `function MovingObstacle() {}`)
 - DON'T
   - use global variables
+  - repeat yourself
+  
 
 ## html/css
 
@@ -243,12 +246,13 @@
   - sketch first
   - add ids/classes
   - div { border: 1px solid black } to visualise structure
-  - css later
+  - CSS later
 - DRY
   - use composition - e.g.: combine classes `class="article container"`
   - use cascading - specifics override generics
   - use inheritance - type attributes (font-family, font-size, line-height, color, ...) trickle down from parent to children
-- LESS is MORE
+- SIMPLICITY
+  - less is more
   - avoid px widths,
   - avoid heights
   - margin bottom / padding top
