@@ -1,12 +1,13 @@
 # concepts
+
 - SPA
+- Build
 - Components
-- Injection
-- Singleton
-- Services
+- Injection + Services + Singleton
 - REST API
 
 # typescript
+
 - [DOCS](https://www.typescriptlang.org/)
 - [LU](http://learn.ironhack.com/#/learning_unit/2960)
 - made by microsoft
@@ -42,6 +43,7 @@
 
 
 # angular
+
 - made by google
 - written in typescript
 - single page application framework, including:
@@ -52,7 +54,8 @@
   - dependency injection
 
 
-# angular CLI
+## angular CLI
+
 - `$ ng new name-of-app`
 - `$ ng serve`
 - `$ ng serve --aot`
@@ -64,7 +67,8 @@
 - `$ ng build`
 
 
-# app structure
+## app structure
+
 - `index.html`
   - is static
   - contains `<app-root></app-root>`
@@ -84,7 +88,8 @@
   - where we should store our smaller components
   - `ng g c components/auth-login-form`
 
-# binding
+## binding
+
 - interpolation `{{ expression }}`
 - property binding `<button [disabled]="processing">`
 - event binding `<button (click)="handleClick($event, index, true)">`
@@ -93,7 +98,8 @@
   - add `imports: [ ... FormsModule, ... ]` to `app.module.ts`
   - `<input type="text" [(ngModel)]="username" />`
 
-# template variables
+## template variables
+
 - declared directly in templates
   - in inputs `<input #username ...>`
   - in inputs with NgModel `<input #usernameField="ngModel" ...>`
@@ -105,7 +111,8 @@
   - input/ngModel variables `<input (keyup)="handleKeyUp(usernameField.value)" ...`
   - ngForm variables `<form (ngSubmit)="addAnimal(form)" ...`
 
-# model/form state
+## model/form state
+
 - state is available in `ngForm` AND `ngModel` variables (see template vars above)
 - available properties:
   - valid
@@ -117,7 +124,8 @@
   - errors (e.g. `usernameField.errors.minlength`)
   - submitted (only in forms)
 
-# directives
+## directives
+
 - [DOCS](https://angular.io/guide/template-syntax)
 - [LU](http://learn.ironhack.com/#/learning_unit/2969)
 - ngIf
@@ -157,7 +165,8 @@
   - `(output)="handleFunction($event)"`
   - listen in parent components to events emitted from child components
 
-# component inputs
+## component inputs
+
 - [DOCS](https://angular.io/guide/component-interaction)
 - [LU](http://learn.ironhack.com/#/learning_unit/2974)
 - in the child component's class
@@ -168,7 +177,8 @@
 - in the parent component's template
   - `<app-restaurant-card [restaurant]="data">...`
 
-# component outputs
+## component outputs
+
 - [DOCS](https://angular.io/guide/component-interaction)
 - [LU](http://learn.ironhack.com/#/learning_unit/2974)
 - in the child component's class
@@ -190,7 +200,7 @@
 - using variable as pipe arguments:
   - price: {{product.price | currency:user.settings.currency:'symbol':'1.2-2'}}
 
-# routing
+## routing
 
 - in `app.module.ts`
   - `import { RouterModule, Routes } from '@angular/router';`
@@ -212,7 +222,7 @@
   - in `app.module.ts`
     - `{path: '**', component: NotFoundPageComponent}`
     
-# services 
+## services 
 - [DOCS](https://angular.io/guide/component-interaction)
 - [LU](http://learn.ironhack.com/#/learning_unit/2974)
 - generate with `ng g s services/name`
@@ -237,7 +247,7 @@
   - if making requests to a larger API (e.g., your Node.js REST API) create one service per domain (e.g.: `auth`, `restaurants`, etc...)
 
 
-# guards
+## guards
 - [DOCS](https://angular.io/guide/router#milestone-5-route-guards)
 - [LU](http://learn.ironhack.com/#/learning_unit/3231)
 - [CHEAT SHEET](./angular-auth/guards)
@@ -273,7 +283,7 @@
   - `require-anon` where an anonymous user is required
   - `init-auth` where it's irrelevant whether the user is logged in or not (but we still want to initialize the auth service)
 
-# http
+## http
 - [DOCS](https://angular.io/guide/http)
 - [LU](http://learn.ironhack.com/#/learning_unit/3222)
 - [CHEAT SHEET](./angular-http/)
