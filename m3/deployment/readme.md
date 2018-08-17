@@ -4,6 +4,8 @@
 
 - create heroku app "foobar-server"
 
+- follow steps outlined [here](../../m2/deployment.md)
+
 ## backend app.js
 
 ```
