@@ -40,6 +40,9 @@ CLIENT_URL=https://foobar.herokuapp.com
 
 - fix all the errors
 
+- $ cd dist && ll
+- write down the name of the folder inside dist
+
 ## frontend package.json
 
 - add engines (run `node --version` and `npm --version` in your laptop first)
@@ -71,6 +74,7 @@ typescript
 
 - this tiny node server will serve your angular app in heroku
 - copy `app.js` to the root of the repository
+- on both routes of app.js, change the folder name 'client' by the name you've noted before when doing ng build
 - `npm install --save express`
 
 ## frontend environemnts
