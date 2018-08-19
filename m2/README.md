@@ -5,6 +5,7 @@
 - Backend rendering
 - Session + Auth
 - Modules + packages
+- Design & Technical debt
 - MVC
 - DB + Data modelling
 
@@ -81,7 +82,7 @@
   - secure
 - url
   - `https://localhost:3000/homepage?foo=bar&baz=123#fragment`
-  - `scheme://hostname:port/path?querystring` 
+  - `scheme://hostname:port/path?querystring`
   - fragment is never sent to the server
 - method: GET, POST, PUT, DELETE [and others](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods)
 - [status codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status):
@@ -105,7 +106,7 @@
 - add .eslintrc.json (eslint --init)
 - git init
 - add .gitignore with node_modules
-- add our [error handling snippets](./express-apps/app.js) to app.js 
+- add our [error handling snippets](./express-apps/app.js) to app.js
 
 ## session & auth
 - use expression session (see snippet)
@@ -134,14 +135,14 @@
 - order matters, middlewares before routes, 404 at the end
 - separate your routes by prefix (e.g. '/auth', '/beers', ...)
 - POST routes
-  - check for authorization (e.g. `if (req.session.currentUser) ... ` 
+  - check for authorization (e.g. `if (req.session.currentUser) ... `
   - always validate the POST body (e.g. `if (!req.body.username) ....`
   - always `res.redirect()` never `res.render()`
 - GET routes
-  - check for authorization (e.g. `if (req.session.currentUser) ... ` 
+  - check for authorization (e.g. `if (req.session.currentUser) ... `
   - when loading items by id, check if DB returns a doc, and if it doesn't `return next()` to send to 404 middleware
   - use a `const data` object to send to `res.render('template', data)`
-- always `.catch(next)` 
+- always `.catch(next)`
 
 # mongodb
 

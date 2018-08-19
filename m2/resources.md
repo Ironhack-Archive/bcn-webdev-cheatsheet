@@ -1,15 +1,8 @@
 # Resources
 
-
 ## Tools
 
-Auth0
-
-
-## Accessibility
-
-- [Tota11y](http://khan.github.io/tota11y)
-
+- [ESLint](https://eslint.org/docs/rules/)
 
 ## Documentation
 
@@ -23,8 +16,6 @@ Auth0
 - [SASS](https://sass-lang.com/guide)
 - [ARIA](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA)
 
-
-
 ## Libraries
 
 - [Lodash](https://lodash.com/docs)
@@ -32,22 +23,9 @@ Auth0
 - [Handlebars](http://tryhandlebarsjs.com/)
 - [Passport](http://www.passportjs.org/)
 
-
 ## Websites
 
 - [HackerNoon](https://hackernoon.com/)
 - [Webapp](https://webapplog.com/)
 - [StrongLoop](https://strongloop.com/strongblog/)
 - [IBM Javascript](https://developer.ibm.com/node/category/javascript-language/)
-
-
-
-## Youtube Channels
-
-
-
-## Podcasts
-
-
-
-## Specifications

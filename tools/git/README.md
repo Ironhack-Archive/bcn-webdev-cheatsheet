@@ -1,5 +1,7 @@
 # git
 
+- [docs](https://services.github.com/on-demand/downloads/github-git-cheat-sheet.pdf)
+
 - git init
 - git status
 - git remote add origin https://..../name-repo.git
@@ -31,7 +33,7 @@
 - git status
 
 
-## gource
+## gource (visualise history)
 
 - [homepage](http://gource.io/)
 - [installing on osx](http://www.fullybaked.co.uk/articles/getting-gource-running-on-osx)

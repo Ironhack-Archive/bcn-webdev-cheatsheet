@@ -3,18 +3,98 @@
 
 ## Tools
 
+- [VSCode](https://code.visualstudio.com/docs)
+- [Chrome Dev Tools](https://developers.google.com/web/tools/chrome-devtools/)
+
+### Terminal
+
+- [iTerm](https://www.iterm2.com/) and [Terminator](https://gnometerminator.blogspot.com.es/p/introduction.html)
+- [Bash](https://www.gnu.org/software/bash/manual/html_node/index.html)
+
+### Git
+
+- [Git Reference](https://git-scm.com/doc)
+- [Git Cheatsheet](https://services.github.com/on-demand/downloads/github-git-cheat-sheet.pdf)
+- [GitHub](https://guides.github.com/)
+
+### Accessibility
+
+- [Acessibility Checklist][https://a11yproject.com/checklist]
+- [Screen Reader](https://chrome.google.com/webstore/detail/chromevox/kgejglhpjiefppelpmljglcjbhoiplfn)
+- [Tota11y](http://khan.github.io/tota11y)
+- [No Coffee](https://chrome.google.com/webstore/detail/nocoffee/jjeeggmbnhckmgdhmgdckeigabjfbddl?hl=en-GB) Vision filter
+
+
+## Documentation
+
+### HTML
+
+- [MDN HTML guide](https://developer.mozilla.org/en-US/docs/Learn)
+- [MDN HTML reference](https://developer.mozilla.org/kab/docs/Web/HTML)
+- [W3C HTML Validator](https://validator.w3.org/#validate_by_input)
+
+### CSS
+
+- [MDN CSS guide](https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS)
+- [MDN CSS reference](https://developer.mozilla.org/en-US/docs/Web/CSS)
+- [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input)
+
+### Javascript
+
+- [MDN Javascript guide](https://developer.mozilla.org/bm/docs/Web/JavaScript)
+- [MDN Javascript reference](https://developer.mozilla.org/bm/docs/Web/JavaScript)
+
+### Accessibility
+
+- [The a11y project][https://a11yproject.com/]
+- [WRC ARIA LAndmarks][https://www.w3.org/TR/wai-aria-practices-1.1/examples/landmarks/index.html]
+- [MDN WAI-ARIA Basics][https://developer.mozilla.org/en-US/docs/Learn/Accessibility/WAI-ARIA_basics]
+- [The W3C WAI Tutorials][https://www.w3.org/WAI/tutorials/]
+
+### Dom
+
+- [MDN DOM guide](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model)
+- [MDN DOM reference](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model)
+
+### Canvas
+
+- [MDN Canvas guide](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model)
+- [MDN Canvas reference](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model)
+
+- [Can I Use](https://caniuse.com/)
+
+### Testing
+
+- [Frontend Checklist](https://frontendchecklist.io/)
+
+### Building
+
+- [Intro to webpack](https://medium.com/@kimberleycook/intro-to-webpack-1d035a47028d)
+
+### Deploying
+
+- [Github Pages](https://pages.github.com/)
+
+### And many more docs...
+
 - [DEV DOCS](http://devdocs.io/)
 
+## Libraries
 
-### Development
+- [Bootstrap](https://getbootstrap.com/docs/4.1/getting-started/introduction/) - toolkit for developing with HTML, CSS, and JS to quickly prototype your ideas or build your entire app
+- [jQuery](https://api.jquery.com/) - fast, small, and feature-rich JavaScript library with manipulation, event handling, and animation features
+- [MomentJS](https://momentjs.com/) - library to parse, validate, manipulate, and display dates and times in JavaScript
+- [ScrollMagic](http://scrollmagic.io/) - library that tracks user's current scroll position
+- [GSAP](https://greensock.com/gsap) - the GreenSock Animation Platform animates anything JavaScript can touch
 
-- [Chrome Dev Tools](https://developers.google.com/web/tools/chrome-devtools/)
-- [W3C](https://www.w3.org/developers/tools/#tools)
+
+## Online tools
+
+### JS Tools
+
 - [Plunkr](https://plnkr.co/)
 - [JSBin](https://jsbin.com/?html,output)
 - [Repl.it](https://codepen.io/)
-- [VSCode](https://code.visualstudio.com/docs)
-
 
 ### Design
 
@@ -31,7 +111,6 @@
 - [Photos](https://pixabay.com/)
 - [Photos](https://www.freeimages.com/)
 
-
 ### Prototyping
 
 - [Origami](https://origami.design/)
@@ -40,7 +119,6 @@
 - [Pop](https://marvelapp.com/pop/)
 - [UXPin](https://www.uxpin.com/)
 - [MockPlus](https://www.mockplus.com/)
-
 
 ### Lorem Ipsum
 
@@ -57,46 +135,12 @@
 - [PlaceImg](https://placeimg.com/)
 - [...and more](https://www.crazyegg.com/blog/image-text-placeholders-web-design/)
 
+### CSS tools
 
-## CSS tools
 - [UIgradients](https://uigradients.com/) - background Linear Gradient Generator. You can generate the css for gradient with a usefull preview
 - [Colorzilla Gradient Generator](http://www.colorzilla.com/gradient-editor/) - background Linear Gradient Generator. You can generate the css for gradient with a usefull preview
 - [Clippy](https://bennettfeely.com/clippy/) - clip-path generator - you can generate the css for clip-path polygon with a usefull preview
 - [The Ultimate CSS Generator](https://webcode.tools/css-generator) - a very complete CSS generator when you can generate code for animations, box-shadows, filters, etc.
-
-
-## JS Libraries
-- [ScrollMagic](http://scrollmagic.io/) - library that tracks user's current scroll position
-- [GSAP](https://greensock.com/gsap) - the GreenSock Animation Platform animates anything JavaScript can touch
-
-
-### Deploying
-
-- [Github Pages](https://pages.github.com/)
-- [Testing Open Graph](https://developers.facebook.com/tools/debug/)
-- [Intro to webpack](https://medium.com/@kimberleycook/intro-to-webpack-1d035a47028d)
-- [Frontend Checklist](https://frontendchecklist.io/)
-
-
-## Documentation
-
-- [Javascript](https://developer.mozilla.org/bm/docs/Web/JavaScript)
-- [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
-- [HTML](https://developer.mozilla.org/kab/docs/Web/HTML)
-- [DOM](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model)
-- [Can I Use](https://caniuse.com/)
-
-
-### Tools
-
-- [iTerm](https://www.iterm2.com/) and [Terminator](https://gnometerminator.blogspot.com.es/p/introduction.html)
-- [ESLint](https://eslint.org/docs/rules/)
-- [Git Reference](https://git-scm.com/doc)
-- [Git Cheatsheet](https://services.github.com/on-demand/downloads/github-git-cheat-sheet.pdf)
-- [Git Interactive Cheatsheet](https://ndpsoftware.com/)
-- [GitHub](https://guides.github.com/)
-- [Bash](https://www.gnu.org/software/bash/manual/html_node/index.html)
-
 
 ## Tutorials
 
@@ -105,7 +149,6 @@
 - [CSS Tricks](https://css-tricks.com/)
 - [Github HelloWorld](https://guides.github.com/activities/hello-world/)
 
-
 ## Libraries
 
 - [Bootstrap](https://getbootstrap.com/)
@@ -113,7 +156,6 @@
 - [MomentJS](https://momentjs.com/)
 - [ToneJS](https://tonejs.github.io/)
 - [Miligram](https://milligram.io/)
-
 
 ## People
 
