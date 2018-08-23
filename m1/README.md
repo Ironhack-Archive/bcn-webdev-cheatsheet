@@ -80,6 +80,14 @@
   - shorthand property
   - specifity
   - pseudo-selector
+    - :focus
+    - :hover
+    - a:active
+    - a:visited
+    - :disabled
+    - :nth-child(number)
+    - :first-child
+    - :last-child
 - https://cssreference.io/
 - and more:
   - user agent styles
