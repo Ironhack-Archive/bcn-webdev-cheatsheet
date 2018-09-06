@@ -3,42 +3,171 @@
 
 - HTTP request/response cycle
 - Backend rendering
-- Session + Auth
-- Modules + packages
-- Design & Technical debt
-- MVC
-- DB + Data modelling
+- Templates + Layouts + Partials
+- Cookies + Session + Auth
+- CommonJS Modules
+- NPM Packages
+- MVC Pattern
+- CRUD
+- Document DBs + Data modelling
 
 # es6
-- arrow functions have no context
-- arrow functions usually as callbacks
-- single line arrow functions (no brackets, implicit return)
-- variables and constants
+
+- [LU - ES6 | Basics](http://learn.ironhack.com/#/learning_unit/3976)
+- [LU - ES6 | Advanced](http://learn.ironhack.com/#/learning_unit/3977)
+
+- let and const
+  - [MDN let](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let)
+  - [MDN const](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const)
+  - [MDN temporal dead zone](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let#Temporal_Dead_Zone)
+  - block scoped
+    - no leaking vars from for loops, including the the iterator var(s)
+    - shadowing now also happens with blocks
+  - const
+    - value can't change
+    - `const num = 42; num++ // ERROR`
+    - if object can be mofiied (just no reassigned)
+      - `const person = {name: 'Joe'}; person.name = 'Joan'; // OK`
+      - `const person = {name: 'Joe'}; person = {name: 'Joan'}; // ERROR`
+    - same for arrays (remeber: arrays are objects) or any other object
+      - `const names = ['Joe']; names.push('Joan') // OK`
+      - `const names = ['Joe']; names = []; // ERROR`
+
+
+- arrow functions
+  - [MDN Arrow Functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
+  - have no context
+  - no more self = this;
+  - arrow functions everywhere, especially as callbacks
+  - single line arrow functions (no brackets, implicit return)
+    - `const addNumbers = (n1, n2) => n1 + n2;`
+  - multi line, require return statement
+    ```
+    const addRandom = (num) => {
+      const random = Math.random();
+      return num + random;
+    }
+    ```
+  - returning an object from single line arrow function: use ()
+    - `const makePerson = (name, age) => ({name: name, age: age});`
+
+- classes
+  - [MDN Classes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes)
+  - `class` and `constructor()`
+  - methods
+  - inheritance with `class Foo extends Bar` and `super()`
+
+- spread syntax
+  - [MDN Spread Syntax](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
+  - spread operator ...arr
+  - inserting elements into an array
+    - `var parts = ['shoulders', 'knees'];`
+    - `var lyrics = ['head', ...parts, 'and', 'toes'];`
+  - concatenating
+    - `arr1 = [...arr1, ...arr2];`
+  - copy an array
+    - `arr1 = [...arr2];`
+
+- others
+  - object shortcuts (implicit value)
+  - template (and multiline) strings
+  - default values for function parameters
+  - array method examples `arr.findIndex()`, `arr.fill()`, `Array.from()`
+  - string method examples `str.includes()`, `str.startsWidth()`, `str.repeat()`
+
+## promises
+
+- [LU](http://learn.ironhack.com/#/learning_unit/3979)
+- [MDN Promises guide](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises)
+- [MDN Promises reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+
+- syntax
+  - instead of `do((err, result) => {});`
+  - `do().then(result => { ... handle result ... }).catch(err => { ... handle error ... })`
+
+- promise as a variable
+  - `const promiseToDoSomething = doSomething()`
+  - can be passed around
+  - can be stored, useful for accessing unresolved/cached results with only one (async) syntax
+
+- late binding
+  - binding after the promise has been resolved/rejected still possible
+  - then/catch will still be invoked
+
+- multiple binding
+  - `promiseToDoSomething.then(result => { ...do things... })`
+  - `promiseToDoSomething.then(result => { ...do more things... })`
+
+- chaining results
+  - return value of `.then()` callback is given as argument to the chained `.then()` callback
+  - `do1().then(resultOfDo1 => do2(resultOfDo1)).then(resultOfDo2 => { ... })`
+
+- synchronizing parallel work
+  - given array of promises
+  - wait for all to resolve `Promise.all(promises).then(results => { /* array with resolve values of all promises, in same order */ })`
+  - wait for the first to resolve `Promise.race(promises).then(result => { /* result is the resolve value of the first promise to resolve  */ })`
+
+- DRY error handling
+  - `do1().then(result1 => do2()).then(result2 => do3()).catch(err => /* { err is from do1(), do2() OR do3() */ });`
+
+- creating a function that returns a promise
+  ```javascript
+  const doSomething = function () {
+    return new Promise((resolve, reject) => {
+      // call resolve(value) when you have the result
+      // call reject(error) or throw new Error('error')
+    });
+  };
+  ```
+
+- creating pre-resolved/pre-rejected promises
+  - `const resolved = Promise.resolve(value);`
+  - `const rejected = Promise.reject(error);`
+
+
+
+## es6 best practices
+
+- [LU](http://learn.ironhack.com/#/learning_unit/3979)
+- [refactoring](https://refactoring.guru/)
+- short lines
+- small functions
+- use arrow functions
+- variables and functions
   - use const always
   - use let when const not possible
   - don't use var anymore
-- es6 classes
-- es6 with inheritance
-- spread operator ...arr
-- object shortcuts (implicit value)
-- template (and multiline) strings
+- OO
+  - small classes
+  - small methods
+  _ this._privateData
+  - _doPricateThing()
+- Promises
+  - always use when available
+  - always catch
 
 # nodejs
+
+- [LU](http://learn.ironhack.com/#/learning_unit/3985)
+- [Node.js docs](https://nodejs.org/dist/latest-v10.x/docs/api/)
+
 - **IT'S NOT A FRAMEWORK!**
 - runtime environment for running javascript in the backend (v8 engine)
 - app can be an http server (runs "forever")
 - runs javascript, same as browser (but no window, no DOM)
 - start apps with "node app.js"
 - node callbacks convection (err, result) => { ... }
-- has some built-in modules like `fs`, `process`, `path` and `http`+
+- has some built-in modules like `fs`, `process`, `path` and `http`
 
 ## node modules
 - every js file is a module
 - every file has it's own scope (no global scope)
 - npm packages are also modules
 - for our files:
-  - in mymodule.js do module.exports = ...
-  - const mymodule = require('./folder/mymodule')
+  - in `folder/mymodule.js`, to define what it exports
+    - `module.exports = ...`
+  - in another file use relative path to require it
+    - `const mymodule = require('./folder/mymodule')`
 - for npm packages:
   - const express = require('express')
 
@@ -74,6 +203,7 @@
 
 # http
 
+- [LU](http://learn.ironhack.com/#/learning_unit/3986)
 - request + response = request/response cycle
 - request = headers + body (optional)
 - response = status + headers + body (optional)
