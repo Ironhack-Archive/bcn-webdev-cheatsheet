@@ -73,3 +73,25 @@ p {
 
 
 /* ---- components ---- */
+
+.button {
+  width: 100%;
+  background-color: blue;
+  color: #fff;
+  border: 1px solid #fff
+}
+
+.button-alt {
+  color: blue;
+  background-color: #fff;
+}
+
+/* ---- section ---- */
+
+section.testimonials {
+  // ...
+}
+
+section.testimonials .button {
+  margin-bottom: 10px;
+}
