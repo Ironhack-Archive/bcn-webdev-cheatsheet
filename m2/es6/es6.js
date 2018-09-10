@@ -18,7 +18,7 @@ class Foo {
     }
 }
 
-class Foo extends Bar {
+class Bar extends Foo {
     constructor(param1, param2) {
         super(param1, param2)
     }
@@ -30,7 +30,7 @@ class Foo extends Bar {
     }
 }
 
-// -- object shortcut
+// -- object shorthand property names
 
 const name = "foo";
 const obj = { name };
@@ -43,3 +43,12 @@ const name = "joe"
 const text = `
     <p>hello ${name}</p>
 `;
+
+
+// -- destructuring
+
+const person = {name: 'Joe', age: 33};
+let {name, age} = person;
+console.log(name, age); // Joe 33
+
+
