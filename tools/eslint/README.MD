@@ -4,5 +4,4 @@
   - use popular style guide
   - standard
   - json
-- `npm install --save-dev eslint`
 - replace `.eslintrc.json` with [this](.eslintrc.json)
