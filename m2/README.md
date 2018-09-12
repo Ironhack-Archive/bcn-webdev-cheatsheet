@@ -285,7 +285,7 @@
 ## mongo shell
 - $ mongo
 - show dbs
-- use databaseName
+- use database-name
 - db.help()
 - db.createCollection("animals")
 - show collections
