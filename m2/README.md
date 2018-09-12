@@ -295,7 +295,7 @@
 - [read operations](https://docs.mongodb.com/manual/crud/#read-operations)
 
 ## mongo import
-- mongoimport  --db databaseName  --collection collectionName --file fileName
+- mongoimport  --db database-name  --collection collection-name --file fileName
 
 ## mongoose
 - npm install --save mongoose
