@@ -1,4 +1,4 @@
-const Place = require(../models/place);
+const Place = require('../models/place');
 
 // with promise variable
 router.get('/', (req, res, next) => {
