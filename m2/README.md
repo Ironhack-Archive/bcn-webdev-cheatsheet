@@ -238,6 +238,31 @@
 - add .gitignore with node_modules
 - add our [error handling snippets](./express-apps/app.js) to app.js
 
+## express route
+
+- `router.get('/foo/bar/baz', (req, res, next) => { .... });`
+  - authorize, validate, perform actions, render/redirect
+  - GET routes: render or redirect
+  - POST routes: always redirect
+- req
+  - `req.method` - GET/POST
+  - `req.path` - `/foo/bar/baz`
+  - `req.headers` - key/values of all headers sent from browser
+  - `req.body` key/values of all data from POST body
+  - `req.params` key/values of path placeholders (`/product/:productId/reviews/:reviewId`)
+  - `req.query` key/values of query string (`/products/search?page=2&sort=price`)
+- res
+  - `res.status(404)` - set the status ccode of the response
+  - `res.send('<h1>some text</h1>')` - just responde with a string
+  - `res.redirect('/some/path')` - send a 302 response with a location (start with `/` to make it an absolute path)
+  - `res.render('template-name', data)` - if data contains `.events`, you can use `{{#each events}}` in the template
+  - `res.json(data)` - send JSON data, will also set the header `Content-type: application/json`
+  - `res.set('Content-Type', 'text/plain')` - set custom headers
+- next
+  - call `next()` to serve a 404
+  - call `next(err)` to serve a 500 and log the error
+
+
 ## session & auth
 - use expression session (see snippet)
 - 2x routes for login (get & post)
