@@ -19,8 +19,9 @@ app.use(session({
 }));
 
 
-// note1: currentUser needs to match whatever you use in login/signup/logout routes
-// note2: if using passport, req.user instead
+// Makes the currentUser available in every page
+  // note1: currentUser needs to match whatever you use in login/signup/logout routes
+  // note2: if using passport, req.user instead
 app.use((req, res, next) => {
   app.locals.currentUser = req.session.currentUser;
   next();
