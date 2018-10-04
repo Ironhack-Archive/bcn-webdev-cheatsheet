@@ -38,7 +38,7 @@ export class RestaurantService {
     const options = {
       withCredentials: true
     };
-    return this.httpClient.get(`${this.baseUrl}`, data, options)
+    return this.httpClient.post(`${this.baseUrl}`, data, options)
       .toPromise();
   }
 
