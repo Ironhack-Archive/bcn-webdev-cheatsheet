@@ -12,6 +12,7 @@
 - [LU](http://learn.ironhack.com/#/learning_unit/2960)
 - made by microsoft
 - superset of javascript
+  - all ES5 and ES6 code is valid in typescript
 - browser can NOT understand typescript
 - transpiled down to es6 or es5 by tools
 - types
@@ -40,10 +41,34 @@
 - decorators
   - [DOCS](https://www.typescriptlang.org/docs/handbook/decorators.html)
   - can be applied to class, class property, class method, function param, getters/setters
-
+- DO:
+  - add types everywhere
+    - function parameters 
+    - function return values
+    - class properties
+  - use lower case for primitives
+    - string
+    - boolean
+    - number
+  - upper case for objects
+    - Object
+    - Array
+    - Date
+  - K.I.S.S. objects and arrays (prevents errors like `username is not a known property of newUser`)
+    - `newEvent: any`
+    - `events: Array<any>`
+- DON'T
+  - add `:void` to functions that return undefined
+  - forget to initialize arrays `events: Array<any> = []`
+    - prevents error when later doing `this.events.push(...)`
+  - add the type declaration to primitives that are immediately initialized
+    - e.g.: `category: string = 'default'`
+    - prevents tslint complaining `Type string trivially inferred from a string literal, remove type annotation (no-inferrable-types)`
+  
 
 # angular
 
+- [DOCS](https://angular.io/)
 - made by google
 - written in typescript
 - single page application framework, including:
@@ -56,6 +81,7 @@
 
 ## angular CLI
 
+- [DOCS](https://github.com/angular/angular-cli/wiki)
 - `$ ng new name-of-app`
 - `$ ng serve`
 - `$ ng serve --aot`
@@ -69,11 +95,13 @@
 
 ## app structure
 
+- [DOCS](https://angular.io/guide/setup-systemjs-anatomy)
 - `index.html`
   - is static
   - contains `<app-root></app-root>`
   - can contain extra script and style tags
 - app/app.module.ts (a.k.a. THE app)
+  - [DOCS](https://angular.io/guide/bootstrapping)
   - declares all the angular modules used in the app
   - declares the routing
   - declares all the components created by us
@@ -88,8 +116,9 @@
   - where we should store our smaller components
   - `ng g c components/auth-login-form`
 
-## binding
+## templates & binding
 
+- [DOCS](https://angular.io/guide/template-syntax)
 - interpolation `{{ expression }}`
 - property binding `<button [disabled]="processing">`
 - event binding `<button (click)="handleClick($event, index, true)">`
@@ -98,22 +127,13 @@
   - add `imports: [ ... FormsModule, ... ]` to `app.module.ts`
   - `<input type="text" [(ngModel)]="username" />`
 
-## template variables
+## forms
 
-- declared directly in templates
-  - in inputs `<input #username ...>`
-  - in inputs with NgModel `<input #usernameField="ngModel" ...>`
-  - in forms `<form #form="ngForm" ...>`
-- used directly in templates
-  - ngModel variables `<div *ngIf="usernameField.errors">`
-  - ngForm variables `<div *ngIf="form.invalid">`
-- passed from template to component class
-  - input/ngModel variables `<input (keyup)="handleKeyUp(usernameField.value)" ...`
-  - ngForm variables `<form (ngSubmit)="addAnimal(form)" ...`
-
-## model/form state
-
-- state is available in `ngForm` AND `ngModel` variables (see template vars above)
+- [DOCS](https://angular.io/guide/forms)
+- NOTE: angular has two types of forms
+  - template-driven forms (the one we use)
+  - reactive forms (the one we DON'T use)
+- form and field state is available in `ngForm` AND `ngModel` variables (see template vars below)
 - available properties:
   - valid
   - invalid
@@ -123,6 +143,18 @@
   - untouched
   - errors (e.g. `usernameField.errors.minlength`)
   - submitted (only in forms)
+- template variables
+  - declared directly in templates
+    - in inputs `<input #username ...>`
+    - in inputs with NgModel `<input #usernameField="ngModel" ...>`
+    - in forms `<form #form="ngForm" ...>`
+  - used directly in templates
+    - ngModel variables `<div *ngIf="usernameField.errors">`
+    - ngForm variables `<div *ngIf="form.invalid">`
+  - passed from template to component class
+    - input/ngModel variables `<input (keyup)="handleKeyUp(usernameField.value)" ...`
+    - ngForm variables `<form (ngSubmit)="addAnimal(form)" ...`
+
 
 ## directives
 
@@ -150,6 +182,7 @@
   - `[ngStyle]="{ 'left': player.x, 'top': player.y }"`
 
 # component hierarchy
+
 - components can be nested
 - create components to reuse (DRY principle) and simplify (single responsability principle)
 - top level components we call "page" components (convention)
@@ -191,6 +224,7 @@
   - `handleSearchChange(event) { .... }`
 
 # pipes
+
 - [DOCS](https://angular.io/api/core/Pipe)
 - [LU](http://learn.ironhack.com/#/learning_unit/3210)
 - [DatePipe](https://angular.io/api/common/DatePipe)
@@ -202,6 +236,8 @@
 
 ## routing
 
+- [DOCS](https://angular.io/guide/router)
+- [CHEAT SHEET](./angular-routing)
 - in `app.module.ts`
   - `import { RouterModule, Routes } from '@angular/router';`
   - `const routes: Routes = [ ...,  { path: 'movies/:id', component: MovieDetailPageComponent }, ... ]`
@@ -222,7 +258,8 @@
   - in `app.module.ts`
     - `{path: '**', component: NotFoundPageComponent}`
     
-## services 
+## services
+
 - [DOCS](https://angular.io/guide/component-interaction)
 - [LU](http://learn.ironhack.com/#/learning_unit/2974)
 - generate with `ng g s services/name`
@@ -248,6 +285,7 @@
 
 
 ## guards
+
 - [DOCS](https://angular.io/guide/router#milestone-5-route-guards)
 - [LU](http://learn.ironhack.com/#/learning_unit/3231)
 - [CHEAT SHEET](./angular-auth/guards)
@@ -284,6 +322,7 @@
   - `init-auth` where it's irrelevant whether the user is logged in or not (but we still want to initialize the auth service)
 
 ## http
+
 - [DOCS](https://angular.io/guide/http)
 - [LU](http://learn.ironhack.com/#/learning_unit/3222)
 - [CHEAT SHEET](./angular-http/)
