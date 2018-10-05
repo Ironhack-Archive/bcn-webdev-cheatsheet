@@ -1,4 +1,4 @@
-### iTerm 2 (Terminal - Mac)
+### Terminal (MAC)
 
 #### Tabs and Windows
 **Function** | **Shortcut**
