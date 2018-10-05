@@ -1,4 +1,4 @@
-### VSCode
+### VSCode (Sublime Text Keymap - MAC)
 
 #### Text Editing Beginner
 **Function** | **Shortcut**
