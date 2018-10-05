@@ -1,11 +1,13 @@
-### Chrome
+### Chrome (MAC)
 
-- `cmd + alt + arrow` (change between tabs)
-- `cmd + shift + i` (open inspector)
-- `cmd + r` (reload page)
-- `cmd + l` (focus on navigation bar)
-- `cmd + n` (open new window)
-- `cmd + t` (open new tab)
-- `cmd + w` (close current tab)
-- `cmd + shit + t` (open closed tab)
-- `cmd + q` (close chrome)
+**Function** | **Shortcut**
+-------- | --------
+change between tabs |`⌘` + `⌥` + `arrow` 
+open inspector |`⌘` + `⇧` + `i` 
+reload page |`⌘` + `r` 
+focus on navigation bar |`⌘` + `l` 
+open new window |`⌘` + `n` 
+open new tab |`⌘` + `t` 
+close current tab |`⌘` + `w` 
+open closed tab |`⌘` + `⇧` + `t` 
+close chrome |`⌘` + `q` 
