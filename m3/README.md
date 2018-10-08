@@ -88,6 +88,7 @@
 - `$ ng g c components/name-of-component`
 - `$ ng g c pages/name-of-page`
 - `$ ng g s services/name-of-service`
+- `$ ng g g guards/name-of-guard`
 - `$ ng g p pipes/name-of-pipe`
 - `$ ng g class models/name-of-model`
 - `$ ng build`
