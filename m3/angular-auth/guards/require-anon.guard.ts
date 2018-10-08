@@ -4,7 +4,9 @@ import { Router } from '@angular/router';
 
 import { AuthService } from '../services/auth.service';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class RequireAnonGuard implements CanActivate {
 
   constructor(
