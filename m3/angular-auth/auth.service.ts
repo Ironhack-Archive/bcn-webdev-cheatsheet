@@ -4,7 +4,10 @@ import { Subject, Observable } from 'rxjs';
 
 // import { environment } from '../../environments/environment';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
+
 export class AuthService {
 
   private user: any;
