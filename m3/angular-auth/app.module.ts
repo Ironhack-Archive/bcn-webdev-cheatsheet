@@ -1,7 +1,3 @@
-// -- services
-
-import { AuthService } from './services/auth.service';
-
 // -- guards
 
 import { RequireAnonGuardService } from './guards/require-anon-guard.service';
@@ -18,13 +14,12 @@ const routes: Routes = [
   { path: '**', redirectTo: '' }
 ];
 
-// don't forget to register the guards (and the AuthService) in the providers
+// don't forget to register the guards in the providers
 
 @NgModule({
    ...
   providers: [
     ...
-    AuthService,
     InitAuthGuardService,
     RequireAnonGuardService,
     RequireUserGuardService,
