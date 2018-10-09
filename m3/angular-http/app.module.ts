@@ -2,10 +2,6 @@ import { HttpClientModule } from '@angular/common/http';
 
 ...
 
-import { RestaurantService } from  './services/restaurant.service';
-
-...
-
 @NgModule({
    ...
   imports: [
@@ -13,7 +9,5 @@ import { RestaurantService } from  './services/restaurant.service';
     HttpClientModule,
     ...
   ],
-  providers: [
-     RestaurantService
-  ]
+   ...
 })
