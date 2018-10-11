@@ -1,3 +1,11 @@
+// EJS
+// npm install ejs
+
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs');
+
+
+// Layouts
 // npm install --save express-ejs-layouts
 
 const expressLayouts = require('express-ejs-layouts');
