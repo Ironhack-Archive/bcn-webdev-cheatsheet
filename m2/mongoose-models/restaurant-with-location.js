@@ -1,3 +1,5 @@
+// model with locations
+
 'use strict';
 
 const mongoose = require('mongoose');

@@ -1,3 +1,4 @@
+// 1..N or N..M
 'use strict';
 
 const mongoose = require('mongoose');
