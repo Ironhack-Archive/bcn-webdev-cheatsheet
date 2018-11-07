@@ -51,10 +51,8 @@ Geo Location:
 ## Components
 
 - Restaurant Card component
-  - Input: restaurant: any
-  - Output: favorite(restaurantId: string, on: boolean)
-- Search component
-  - Output: change(terms: string)
+  - props: 
+  - state: 
 
 ## IO
 
