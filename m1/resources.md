@@ -208,6 +208,7 @@
 - [James Halliday](http://substack.net/)
 - [Eric Elliot](https://medium.com/@_ericelliott)
 - [Andrea Giammarchi](https://medium.com/@WebReflection)
+- [Kyle Simpson](https://me.getify.com/)
 
 
 ## Websites
